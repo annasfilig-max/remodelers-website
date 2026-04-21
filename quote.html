@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Free Quote | [Your Company Name] — Remodeling Contractor in [City]</title>
+<meta name="description" content="Request a free, no-pressure quote from [Your Company Name]. Tell us about your project and we'll reply within one business day to schedule an in-home visit.">
+<link rel="canonical" href="[https://yourdomain.com]/quote.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Request a Free Quote | [Your Company Name]">
+<meta property="og:description" content="Start your remodeling project with a free, in-home consultation.">
+<meta property="og:image" content="https://placehold.co/1200x630/2a2a2a/ffffff?text=Free+Quote">
+<meta property="og:url" content="[https://yourdomain.com]/quote.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"[https://yourdomain.com]/"},{"@type":"ListItem","position":2,"name":"Get a Quote","item":"[https://yourdomain.com]/quote.html"}]}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">[Your Company Name]<small>Design · Build · Renew</small></a>
+    <nav class="nav-main" aria-label="Primary"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="service-areas.html">Service Areas</a><a href="gallery.html">Gallery</a><a href="testimonials.html">Reviews</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
+    <div class="nav-right"><a href="tel:[Phone Number]" class="nav-phone"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> [Phone Number]</a><a href="quote.html" class="btn btn-primary">Get a Free Quote</a></div>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="service-areas.html">Service Areas</a><a href="gallery.html">Gallery</a><a href="testimonials.html">Reviews</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="quote.html" class="btn btn-primary">Get a Free Quote</a></div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Get a Quote</div>
+    <h1>Request a Free Quote</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="align-items:flex-start;">
+      <div>
+        <!-- Replace YOUR_FORM_ID with your actual Formspree endpoint -->
+        <form data-validate action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="card" style="padding:2.5rem;">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <h2 style="margin-bottom:0.5rem;">Tell Us About Your Project</h2>
+          <p style="margin-bottom:2rem;">We reply within one business day to schedule an in-home consultation.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-name">Name</label>
+              <input id="q-name" type="text" name="name" required aria-describedby="q-name-err">
+              <div class="error-msg" id="q-name-err" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label for="q-email">Email</label>
+              <input id="q-email" type="email" name="email" required aria-describedby="q-email-err">
+              <div class="error-msg" id="q-email-err" aria-live="polite"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" type="tel" name="phone" required aria-describedby="q-phone-err">
+              <div class="error-msg" id="q-phone-err" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label for="q-address">Project Address</label>
+              <input id="q-address" type="text" name="address" required aria-describedby="q-address-err">
+              <div class="error-msg" id="q-address-err" aria-live="polite"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="q-service">Service Needed</label>
+            <select id="q-service" name="service" required aria-describedby="q-service-err">
+              <option value="">Select a service…</option>
+              <option>Service One</option>
+              <option>Service Two</option>
+              <option>Service Three</option>
+              <option>Service Four</option>
+              <option>Service Five</option>
+              <option>Service Six</option>
+              <option>Not sure yet</option>
+            </select>
+            <div class="error-msg" id="q-service-err" aria-live="polite"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-date">Preferred Start Date</label>
+              <input id="q-date" type="date" name="date">
+              <div class="error-msg" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label for="q-time">Best Time to Call</label>
+              <select id="q-time" name="time">
+                <option>Morning (8am – 12pm)</option>
+                <option>Afternoon (12pm – 5pm)</option>
+                <option>Evening (after 5pm)</option>
+                <option>Anytime</option>
+              </select>
+              <div class="error-msg" aria-live="polite"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="q-message">Project Details</label>
+            <textarea id="q-message" name="message" required aria-describedby="q-message-err" placeholder="Share a little about what you have in mind…"></textarea>
+            <div class="error-msg" id="q-message-err" aria-live="polite"></div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Request My Free Quote</button>
+          <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:1rem; text-align:center;">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>. No spam, ever.</p>
+        </form>
+        <div class="form-success" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg><h3>Thanks — we'll be in touch within one business day.</h3></div>
+      </div>
+      <aside style="position:sticky; top:100px;">
+        <div class="card" style="padding:2rem;">
+          <span class="eyebrow">Why Request Through Us</span>
+          <h3 style="margin-top:0.75rem; margin-bottom:1.25rem;">What You Can Expect</h3>
+          <ul class="checklist" style="margin:0;">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Response within one business day</strong> — often same-day.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Complimentary in-home visit</strong> to walk the space.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Honest feedback</strong> — even if your project isn't right for us.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>No sales pressure</strong> — take the time you need to decide.</span></li>
+          </ul>
+          <hr style="border:none; border-top:1px solid var(--color-border); margin:1.5rem 0;">
+          <div style="background:var(--color-bg-alt); padding:1.25rem; border-radius:8px;">
+            <strong style="color:var(--color-primary); display:block; margin-bottom:0.5rem;">Prefer to call?</strong>
+            <a href="tel:[Phone Number]" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:1.125rem; font-weight:600; color:var(--color-accent-dark);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              [Phone Number]
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-alt">
+  <div class="container">
+    <div class="trust-strip" style="border-top:none; margin:0; color:var(--color-primary);">
+      <div class="trust-item" style="color:var(--color-primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> BBB Accredited</div>
+      <div class="trust-item" style="color:var(--color-primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="var(--color-accent)" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 22l-6-4-6 4 1.5-8.5L2 9h7z"/></svg> 5-Star Reviews</div>
+      <div class="trust-item" style="color:var(--color-primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="10"/></svg> [XX]+ Years</div>
+      <div class="trust-item" style="color:var(--color-primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed & Insured</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:720px;">
+    <div class="testimonial-card" style="padding:2.5rem;">
+      <svg class="quote-mark" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M10 8v8H4V10a4 4 0 0 1 4-4h2v2H8a2 2 0 0 0-2 2v2h4zm10 0v8h-6V10a4 4 0 0 1 4-4h2v2h-2a2 2 0 0 0-2 2v2h4z"/></svg>
+      <blockquote style="font-size:1.25rem; line-height:1.6;">We got three quotes. Theirs wasn't the cheapest, but the process was so much more organized that it wasn't a close call. Six months in, we'd make the same choice again.</blockquote>
+      <div class="testimonial-meta"><div class="avatar">LM</div><div><div class="testimonial-name">Laura M.</div><div class="testimonial-location">[City Name]</div><div class="stars">★★★★★</div></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="logo">[Your Company Name]<small>Design · Build · Renew</small></div><p style="color:rgba(255,255,255,0.7); font-size:0.9375rem;">Locally owned design-build remodelers serving [Service Region] since [Year Founded]. Licensed & Insured · License #[XXXXXX]</p></div>
+      <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="services.html#service-one">Service One</a></li><li><a href="services.html#service-two">Service Two</a></li><li><a href="services.html#service-three">Service Three</a></li><li><a href="services.html#service-four">Service Four</a></li><li><a href="services.html#service-five">Service Five</a></li><li><a href="services.html#service-six">Service Six</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:[Phone Number]">[Phone Number]</a></li><li><a href="mailto:[Email]">[Email]</a></li><li>[Street Address]<br>[City, State ZIP]</li><li style="margin-top:0.75rem;">Mon–Fri 8am–5pm<br>Sat by appointment</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="social-row">
+        <a href="#" class="social-icon" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Google"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1h-9.17v2.96h5.27c-.23 1.47-1.67 4.3-5.27 4.3-3.17 0-5.76-2.62-5.76-5.86s2.59-5.86 5.76-5.86c1.8 0 3.02.77 3.71 1.43l2.53-2.44C16.77 4.24 14.7 3.3 12.18 3.3 6.98 3.3 2.75 7.53 2.75 12.5s4.23 9.2 9.43 9.2c5.45 0 9.05-3.83 9.05-9.22 0-.62-.07-1.1-.13-1.48z"/></svg></a>
+      </div>
+      <div>© [Year] [Your Company Name]. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
