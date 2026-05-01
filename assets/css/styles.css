@@ -19,6 +19,28 @@
   --ink-faint:   #6b6b6b;
   --line:        #262626;
   --line-soft:   #1f1f1f;
+  --img-filter:  saturate(0.95) brightness(0.92);
+  --hero-overlay-1: rgba(10,10,10,0.55);
+  --hero-overlay-2: rgba(10,10,10,0.85);
+}
+
+/* ================ LIGHT THEME ================ */
+:root[data-theme="light"] {
+  --bg:          #f4f0e8;
+  --bg-2:        #ece6d9;
+  --bg-card:     #ffffff;
+  --bg-elev:     #ffffff;
+  --ink:         #14171c;
+  --ink-muted:   #4a4f57;
+  --ink-faint:   #8a8f99;
+  --line:        #d9d2c4;
+  --line-soft:   #e6e0d3;
+  --img-filter:  saturate(1) brightness(1);
+  --hero-overlay-1: rgba(20,23,28,0.30);
+  --hero-overlay-2: rgba(20,23,28,0.55);
+}
+
+:root {
 
   --brass:        #4870A8;
   --brass-bright: #6090C8;
@@ -1707,6 +1729,165 @@ img { max-width: 100%; height: auto; display: block; }
   #jtm-promo-banner .jtm-promo-divider { display: none; }
   #jtm-promo-banner .jtm-promo-text { font-size: 0.75rem; }
 }
+
+/* ============================================================
+   REVEAL ANIMATIONS (Coconut-style scroll-trigger)
+   ============================================================ */
+.reveal,
+.fade-in,
+.sec-head,
+.svc-card,
+.svc-wide,
+.port-tile,
+.stat,
+.testimonial,
+.step,
+.city-card,
+.team-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+.reveal.in-view,
+.fade-in.in-view,
+.sec-head.in-view,
+.svc-card.in-view,
+.svc-wide.in-view,
+.port-tile.in-view,
+.stat.in-view,
+.testimonial.in-view,
+.step.in-view,
+.city-card.in-view,
+.team-card.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger children when their parent grid is in viewport */
+.svc-wide-grid .svc-wide:nth-child(2) { transition-delay: 80ms; }
+.svc-wide-grid .svc-wide:nth-child(3) { transition-delay: 160ms; }
+.svc-wide-grid .svc-wide:nth-child(4) { transition-delay: 240ms; }
+.svc-wide-grid .svc-wide:nth-child(5) { transition-delay: 320ms; }
+.svc-wide-grid .svc-wide:nth-child(6) { transition-delay: 400ms; }
+
+.portfolio-grid .port-tile:nth-child(2) { transition-delay: 60ms; }
+.portfolio-grid .port-tile:nth-child(3) { transition-delay: 120ms; }
+.portfolio-grid .port-tile:nth-child(4) { transition-delay: 180ms; }
+.portfolio-grid .port-tile:nth-child(5) { transition-delay: 240ms; }
+.portfolio-grid .port-tile:nth-child(6) { transition-delay: 300ms; }
+.portfolio-grid .port-tile:nth-child(7) { transition-delay: 360ms; }
+
+.process-row .step:nth-child(2) { transition-delay: 100ms; }
+.process-row .step:nth-child(3) { transition-delay: 200ms; }
+.process-row .step:nth-child(4) { transition-delay: 300ms; }
+
+.stats-row .stat:nth-child(2) { transition-delay: 80ms; }
+.stats-row .stat:nth-child(3) { transition-delay: 160ms; }
+.stats-row .stat:nth-child(4) { transition-delay: 240ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .fade-in, .sec-head, .svc-card, .svc-wide, .port-tile,
+  .stat, .testimonial, .step, .city-card, .team-card {
+    opacity: 1; transform: none; transition: none;
+  }
+}
+
+/* ============================================================
+   HOVER SHINE (Coconut-style on primary buttons)
+   ============================================================ */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.35) 50%, transparent 70%);
+  transform: translateX(-110%);
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+.btn-primary:hover::before { transform: translateX(110%); }
+
+/* ============================================================
+   THEME TOGGLE BUTTON
+   ============================================================ */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border: 1px solid var(--line);
+  background: transparent;
+  cursor: pointer;
+  color: var(--ink);
+  transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
+  padding: 0;
+  border-radius: 0;
+}
+.theme-toggle:hover { border-color: var(--brass); color: var(--brass); }
+.theme-toggle .ico-sun { display: none; }
+.theme-toggle .ico-moon { display: block; }
+:root[data-theme="light"] .theme-toggle .ico-sun { display: block; }
+:root[data-theme="light"] .theme-toggle .ico-moon { display: none; }
+@media (max-width: 1023px) {
+  .header-cta .theme-toggle { display: none; }
+}
+
+/* ============================================================
+   LIGHT-THEME ADJUSTMENTS (image filters & hero overlay)
+   ============================================================ */
+:root[data-theme="light"] body { background: var(--bg); color: var(--ink-muted); }
+:root[data-theme="light"] .site-header { background: rgba(244, 240, 232, 0.92); }
+:root[data-theme="light"] .hero::before {
+  background-image:
+    linear-gradient(180deg, rgba(20,23,28,0.18) 0%, rgba(20,23,28,0.45) 70%, var(--bg) 100%),
+    url('https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/hero.png');
+}
+:root[data-theme="light"] .hero-split-img img,
+:root[data-theme="light"] .svc-wide-img,
+:root[data-theme="light"] .svc-card .svc-img,
+:root[data-theme="light"] .port-tile img,
+:root[data-theme="light"] .gallery-item img,
+:root[data-theme="light"] .team-card img {
+  filter: saturate(1) brightness(1);
+  opacity: 1;
+}
+:root[data-theme="light"] .svc-card .svc-img { opacity: 0.85; }
+:root[data-theme="light"] .svc-card::after {
+  background: linear-gradient(180deg, rgba(244,240,232,0.1) 0%, rgba(244,240,232,0.45) 50%, rgba(20,23,28,0.85) 100%);
+}
+:root[data-theme="light"] .marquee { background: var(--bg-2); }
+:root[data-theme="light"] .marquee-track { color: var(--ink-muted); }
+:root[data-theme="light"] .site-footer { background: var(--ink); color: rgba(255,255,255,0.78); }
+:root[data-theme="light"] .site-footer a { color: rgba(255,255,255,0.78); }
+:root[data-theme="light"] .site-footer h4 { color: var(--brass); }
+:root[data-theme="light"] .site-footer .logo-name { color: #fff; }
+:root[data-theme="light"] .cta-band { background: var(--bg); }
+:root[data-theme="light"] .cta-band h2,
+:root[data-theme="light"] .cta-band p { color: var(--ink); }
+:root[data-theme="light"] .testimonial blockquote { color: var(--ink); }
+:root[data-theme="light"] .form-group input,
+:root[data-theme="light"] .form-group select,
+:root[data-theme="light"] .form-group textarea {
+  background: #fff; color: var(--ink);
+}
+:root[data-theme="light"] .btn-secondary { color: var(--ink); border-color: var(--ink); }
+:root[data-theme="light"] .btn-secondary:hover { background: var(--ink); color: var(--bg); }
+:root[data-theme="light"] .btn-outline-white { color: var(--ink); border-color: var(--ink); }
+:root[data-theme="light"] .btn-outline-white:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+:root[data-theme="light"] #jtm-promo-banner { background: var(--bg-2); }
+:root[data-theme="light"] #jtm-promo-banner .jtm-promo-text { color: var(--ink); }
+:root[data-theme="light"] #jtm-promo-banner .jtm-promo-credit { color: var(--ink-faint); }
+:root[data-theme="light"] .hero-meta-num,
+:root[data-theme="light"] .stat-num,
+:root[data-theme="light"] .step h3,
+:root[data-theme="light"] .testimonial-meta strong { color: var(--ink); }
 
 /* ---------- GHL embed overrides ---------- */
 .hl_page-preview--content,
