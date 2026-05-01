@@ -20,11 +20,11 @@
   --line:        #262626;
   --line-soft:   #1f1f1f;
 
-  --brass:        #C68F47;
-  --brass-bright: #DAA561;
-  --brass-deep:   #8B6532;
-  --brass-glow:   rgba(198, 143, 71, 0.45);
-  --brass-subtle: rgba(198, 143, 71, 0.08);
+  --brass:        #4870A8;
+  --brass-bright: #6090C8;
+  --brass-deep:   #2D4F7E;
+  --brass-glow:   rgba(72, 112, 168, 0.5);
+  --brass-subtle: rgba(72, 112, 168, 0.1);
 
   --red:    #b5321c;
   --green:  #4ade80;
