@@ -1981,6 +1981,168 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 6px 22px rgba(20, 23, 28, 0.12);
 }
 
+/* ============================================================
+   COCONUT-STYLE REACTIVE EFFECTS — bumped up
+   ============================================================ */
+
+/* Header layout fix — single-row logo, tighter nav */
+.logo { flex-direction: row; align-items: baseline; gap: 0.625rem; flex-wrap: nowrap; white-space: nowrap; }
+.logo-name { font-size: 1.25rem; }
+.logo-tag {
+  margin-top: 0;
+  font-size: 0.6875rem;
+  display: none;
+}
+@media (min-width: 1280px) {
+  .logo { flex-direction: column; align-items: flex-start; gap: 0; }
+  .logo-tag { display: block; margin-top: 4px; }
+}
+.nav-main ul { gap: 1.5rem; }
+.nav-main a { font-size: 0.75rem; }
+.header-cta { gap: 0.75rem; }
+
+/* Scroll-triggered nav: gets denser & more saturated when scrolled */
+.site-header { transition: background 250ms ease, border-color 250ms ease, box-shadow 300ms ease; }
+.site-header.is-scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  box-shadow: 0 1px 0 var(--line), 0 8px 30px rgba(0, 0, 0, 0.45);
+  border-bottom-color: var(--brass);
+}
+:root[data-theme="light"] .site-header.is-scrolled {
+  background: rgba(244, 240, 232, 0.97);
+  box-shadow: 0 1px 0 var(--line), 0 8px 30px rgba(20, 23, 28, 0.08);
+}
+
+/* Hero accent text — animated brass gradient sweep */
+.hero-split-text h1 em,
+.page-hero h1 em,
+.cta-band h2 em {
+  background: linear-gradient(110deg,
+    var(--brass) 0%, var(--brass-bright) 35%,
+    #9DC0E8 50%, var(--brass-bright) 65%, var(--brass) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Pulsing glow ring on primary buttons (always-on subtle) */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--brass-glow), 0 4px 18px rgba(0,0,0,0.25); }
+  50%      { box-shadow: 0 0 0 6px rgba(72,112,168,0), 0 4px 24px rgba(72,112,168,0.45); }
+}
+.btn-primary { animation: pulse-glow 2.8s ease-in-out infinite; }
+.btn-primary:hover { animation: none; }
+@media (prefers-reduced-motion: reduce) { .btn-primary { animation: none; } }
+
+/* Entrance: hero text slides up + fades on load */
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-split-text > * {
+  animation: hero-rise 900ms cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+.hero-split-text > *:nth-child(1) { animation-delay: 100ms; }
+.hero-split-text > *:nth-child(2) { animation-delay: 220ms; }
+.hero-split-text > *:nth-child(3) { animation-delay: 340ms; }
+.hero-split-text > *:nth-child(4) { animation-delay: 460ms; }
+.hero-split-text > *:nth-child(5) { animation-delay: 580ms; }
+.hero-split-img {
+  animation: hero-rise 1100ms cubic-bezier(0.2, 0.8, 0.2, 1) 200ms backwards;
+}
+
+/* Card hover — bigger lift + glowing border ring */
+.svc-wide,
+.card,
+.testimonial,
+.team-card {
+  transition: transform 320ms cubic-bezier(0.2,0.8,0.2,1),
+              border-color 200ms ease,
+              box-shadow 320ms ease;
+}
+.svc-wide:hover,
+.card:hover,
+.testimonial:hover,
+.team-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--brass);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    0 0 0 1px var(--brass),
+    0 0 30px var(--brass-glow);
+}
+:root[data-theme="light"] .svc-wide:hover,
+:root[data-theme="light"] .card:hover,
+:root[data-theme="light"] .testimonial:hover,
+:root[data-theme="light"] .team-card:hover {
+  box-shadow:
+    0 24px 60px rgba(20, 23, 28, 0.18),
+    0 0 0 1px var(--brass),
+    0 0 30px rgba(72, 112, 168, 0.25);
+}
+
+/* Animated brass underline under section heads */
+.sec-head { position: relative; }
+.sec-head::after {
+  content: "";
+  position: absolute;
+  bottom: -1px; left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--brass), transparent);
+  transition: width 1200ms cubic-bezier(0.2, 0.8, 0.2, 1) 200ms;
+}
+.sec-head.in-view::after { width: 200px; }
+
+/* Portfolio tile hover */
+.port-tile { transition: transform 320ms cubic-bezier(0.2,0.8,0.2,1), border-color 200ms ease, box-shadow 320ms ease, opacity 700ms ease; }
+.port-tile:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--brass);
+}
+
+/* City card hover: soft slide + glow */
+.city-card { transition: background 200ms ease, transform 200ms ease, box-shadow 200ms ease; }
+.city-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(72, 112, 168, 0.3); }
+
+/* Marquee: fade at edges */
+.marquee {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, black 5%, black 95%, transparent 100%);
+}
+
+/* Nav active indicator: animated glow */
+.nav-main a[aria-current="page"]::after {
+  height: 2px;
+  background: linear-gradient(90deg, var(--brass), var(--brass-bright));
+  animation: nav-glow 2s ease-in-out infinite;
+}
+@keyframes nav-glow {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 var(--brass-glow); }
+  50%      { opacity: 0.85; box-shadow: 0 0 8px var(--brass-glow); }
+}
+
+/* Step hover backdrop */
+.step { transition: background 200ms ease; }
+.step:hover { background: var(--brass-subtle); }
+.step:hover .step-num { color: var(--brass-bright); }
+
+/* Big quote — radial brass glow on the mark */
+.big-quote-mark {
+  background: radial-gradient(circle, var(--brass-glow) 0%, transparent 60%);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  padding: 0 0.5rem;
+}
+
 /* ---------- GHL embed overrides ---------- */
 .hl_page-preview--content,
 [id^="section-"],

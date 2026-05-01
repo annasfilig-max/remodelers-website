@@ -223,6 +223,16 @@
     }
   }
 
+  // ===== Scroll-triggered nav (denser bg + brass border when scrolled) =====
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const onHeaderScroll = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 40);
+    };
+    window.addEventListener('scroll', onHeaderScroll, { passive: true });
+    onHeaderScroll();
+  }
+
   // ===== Hero parallax (subtle on scroll) =====
   const heroImg = document.querySelector('.hero-split-img img');
   if (heroImg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
