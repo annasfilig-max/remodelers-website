@@ -3,243 +3,416 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | [Your Company Name] — Remodeling Contractor in [City]</title>
-<meta name="description" content="Full-service remodeling from [Your Company Name]: design, build, and finish work carried out by a single trusted team. Serving [Service Region].">
+<title>Services | [Your Company Name] — Remodeling in [City, State ZIP]</title>
+<meta name="description" content="Full-service Remodeling work for homes across [Service Region]. Six core services from [Your Company Name] — upfront pricing and a workmanship guarantee on every job.">
 <link rel="canonical" href="[https://yourdomain.com]/services.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Services | [Your Company Name]">
-<meta property="og:description" content="Design-build remodeling services from kitchens to whole-home renovations.">
-<meta property="og:image" content="[https://yourdomain.com]/assets/images/hero.png">
+<meta property="og:description" content="Six core Remodeling services with upfront pricing and workmanship guaranteed.">
 <meta property="og:url" content="[https://yourdomain.com]/services.html">
+<meta property="og:image" content="https://yourdomain.com/assets/images/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/favicon.svg">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config = { corePlugins: { preflight: false } }</script>
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/css/styles.css?v=3">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"[https://yourdomain.com]/index.html"},
+  {"@type":"ListItem","position":2,"name":"Services","item":"[https://yourdomain.com]/services.html"}]}
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Service","serviceType":"Service One","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
-{"@type":"Service","serviceType":"Service Two","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
-{"@type":"Service","serviceType":"Service Three","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
-{"@type":"Service","serviceType":"Service Four","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
-{"@type":"Service","serviceType":"Service Five","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
-{"@type":"Service","serviceType":"Service Six","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"[https://yourdomain.com]/"},{"@type":"ListItem","position":2,"name":"Services","item":"[https://yourdomain.com]/services.html"}]}
+  {"@type":"Service","serviceType":"Service One","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
+  {"@type":"Service","serviceType":"Service Two","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
+  {"@type":"Service","serviceType":"Service Three","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
+  {"@type":"Service","serviceType":"Service Four","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
+  {"@type":"Service","serviceType":"Service Five","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"},
+  {"@type":"Service","serviceType":"Service Six","provider":{"@type":"LocalBusiness","name":"[Your Company Name]"},"areaServed":"[Service Region]"}
 ]}
 </script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<!-- ================= JT MARKETING PROMO BANNER ================= -->
+<div id="jtm-promo-banner" role="note" aria-label="Preview by JT Marketing">
+  <span class="jtm-promo-inner">
+    <svg class="jtm-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.4 20 12 16.7 6.6 20 8 13.4 3 9l6.4-.7L12 2z"/></svg>
+    <span class="jtm-promo-text">This site could be yours.</span>
+    <span class="jtm-promo-sep" aria-hidden="true"></span>
+    <span class="jtm-promo-credit">Built by <b>JT Marketing</b></span>
+  </span>
+  <button type="button" class="jtm-close" aria-label="Dismiss" onclick="this.parentElement.style.display='none'">&times;</button>
+</div>
+
+<!-- ================= HEADER ================= -->
 <header class="site-header">
-  <div class="container nav-wrap">
-    <a href="index.html" class="logo">[Your Company Name]<small>Design · Build · Renew</small></a>
-    <nav class="nav-main" aria-label="Primary"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="service-areas.html">Service Areas</a><a href="gallery.html">Gallery</a><a href="testimonials.html">Reviews</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
-    <div class="nav-right"><a href="tel:[Phone Number]" class="nav-phone"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> [Phone Number]</a><a href="quote.html" class="btn btn-primary">Get a Free Quote</a></div>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="[Your Company Name] home">
+      <span class="logo-name">[Your Company Name]</span>
+      <span class="logo-tag">Kitchen &middot; Bath &middot; Whole-Home Remodels</span>
+    </a>
+    <nav class="nav-main" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html" aria-current="page">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:[Phone Number]" class="header-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        [Phone Number]
+      </a>
+      <a href="quote.html" class="btn btn-primary">Free Quote</a>
+    </div>
+    <button class="hamburger" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
-  <div class="mobile-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="service-areas.html">Service Areas</a><a href="gallery.html">Gallery</a><a href="testimonials.html">Reviews</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="quote.html" class="btn btn-primary">Get a Free Quote</a></div>
 </header>
 
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+  <div class="mobile-menu-head">
+    <span class="logo-name">[Your Company Name]</span>
+    <button class="hamburger" data-menu-close aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile primary"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <div class="mobile-menu-footer">
+    <a href="tel:[Phone Number]" class="btn btn-outline-white">Call [Phone Number]</a>
+    <a href="quote.html" class="btn btn-primary">Free Quote</a>
+  </div>
+</div>
+
 <main id="main">
+
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> › Services</div>
-    <h1>Our Services</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Services</div>
+    <h1>Services<br><em style="color:var(--orange);font-style:normal;">Done Right.</em></h1>
+    <p style="color:rgba(255,255,255,0.78);max-width:580px;margin:1rem 0 0;font-size:1.0625rem;">Six core services. One standard. Flat-rate pricing, clean work, and a 15-year workmanship guarantee on every job.</p>
   </div>
 </section>
 
+<!-- Quick service nav grid (photo cards, anchor links) -->
+<section class="section" style="padding:3rem 0;">
+  <div class="container">
+    <div class="grid-3" style="gap:0.75rem;">
+      <a href="#kitchen" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-1.png');"></div>
+        <span class="svc-num">01 / Kitchen</span>
+        <h3 style="font-size:1.25rem;">Kitchen Remodels</h3>
+      </a>
+      <a href="#bath" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-2.png');"></div>
+        <span class="svc-num">02 / Bath</span>
+        <h3 style="font-size:1.25rem;">Bath Remodels</h3>
+      </a>
+      <a href="#cabinets" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-3.png');"></div>
+        <span class="svc-num">03 / Cabinets</span>
+        <h3 style="font-size:1.25rem;">Cabinets &amp; Refacing</h3>
+      </a>
+      <a href="#counters" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-4.png');"></div>
+        <span class="svc-num">04 / Counters</span>
+        <h3 style="font-size:1.25rem;">Countertops &amp; Surfaces</h3>
+      </a>
+      <a href="#tile" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-5.png');"></div>
+        <span class="svc-num">05 / Tile</span>
+        <h3 style="font-size:1.25rem;">Custom Tile &amp; Stone</h3>
+      </a>
+      <a href="#design" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-6.png');"></div>
+        <span class="svc-num">06 / Design</span>
+        <h3 style="font-size:1.25rem;">Design Consultation</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 01 — AC REPAIR ================= -->
+<section id="ac-repair" class="section section-alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">01 / Kitchen</span>
+      <h2>Kitchen Remodels —<br>Same-Day, Every Brand.</h2>
+      <span class="meta">Design &middot; Demo &middot; Build</span>
+    </div>
+    <div class="grid-2">
+      <div><img src="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-1.png" alt="Technician diagnosing residential AC condenser"></div>
+      <div>
+        <p class="lead">When the AC quits, you don't want a sales pitch — you want it cold again. We diagnose every brand, carry common parts on the truck, and most repairs are done the same visit.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Full system diagnostic &amp; load test</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Refrigerant leak check &amp; recharge (R-410A / R-32)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Capacitor, contactor, fan motor &amp; coil work</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Honest repair-vs-replace recommendation</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Schedule a Visit</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 02 — FURNACE REPAIR ================= -->
+<section id="heating-repair" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">02 / Bath</span>
+      <h2>Bath Remodels —<br>Up When You're Not.</h2>
+      <span class="meta">Primary &middot; Guest &middot; Powder</span>
+    </div>
+    <div class="grid-2">
+      <div style="order:2;"><img src="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-2.png" alt="Technician servicing residential gas furnace"></div>
+      <div style="order:1;">
+        <p class="lead">No heat at 2 a.m.? We answer. 24/7 emergency dispatch across [Service Region], with parts in the truck for the fixes that come up the most.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Ignitor, flame sensor &amp; pilot diagnostics</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Blower motor, belt &amp; bearing service</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Heat exchanger inspection &amp; CO testing</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Thermostat, control board &amp; wiring repair</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Schedule a Visit</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 03 — AC INSTALLATION ================= -->
+<section id="ac-install" class="section section-alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">03 / Cabinets</span>
+      <h2>Cabinets &amp; Refacing —<br>Sized For Your Home.</h2>
+      <span class="meta">Custom &middot; Semi-Custom &middot; Refacing</span>
+    </div>
+    <div class="grid-2">
+      <div><img src="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-3.png" alt="New AC condenser installation on concrete pad"></div>
+      <div>
+        <p class="lead">Right-sized systems, clean install, real warranties we stand behind. We don't push the biggest unit — we install the right one.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Manual J load calculation &mdash; sized to your square footage</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Lennox, Trane, Carrier, Goodman, Daikin &amp; Mitsubishi</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Pad, line set, electrical, thermostat &mdash; included</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 10-year parts &amp; labor warranty, financing available</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 04 — FURNACE INSTALL ================= -->
+<section id="furnace-install" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">04 / Counters</span>
+      <h2>Countertops &amp; Surfaces<br>Installation.</h2>
+      <span class="meta">Quartz &middot; Granite &middot; Marble</span>
+    </div>
+    <div class="grid-2">
+      <div style="order:2;"><img src="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-4.png" alt="Technician installing high-efficiency gas furnace"></div>
+      <div style="order:1;">
+        <p class="lead">High-efficiency furnaces and heat pumps sized to your home — not what's on the truck this week. We pull the permits, run the gas, and clean up after.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 95-98% AFUE gas furnaces &amp; cold-climate heat pumps</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Permits, gas line, venting, condensate &mdash; handled</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Federal &amp; utility rebate paperwork done for you</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 10-year warranty &amp; lifetime workmanship guarantee</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 05 — INDOOR AIR ================= -->
+<section id="air-quality" class="section section-alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">05 / Tile</span>
+      <h2>Custom Tile &amp; Stone —<br>Cleaner, Quieter, Drier.</h2>
+      <span class="meta">Showers &middot; Backsplashes &middot; Floors</span>
+    </div>
+    <div class="grid-2">
+      <div><img src="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-5.png" alt="Whole-home air filtration and duct system"></div>
+      <div>
+        <p class="lead">Most homes have a duct problem, an allergy problem, or both. We measure, fix, and seal — no $99 "duct cleaning" gimmicks.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Whole-home media filtration (MERV 11&ndash;16)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Steam &amp; bypass humidifiers, whole-home dehumidifiers</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> UV-C &amp; bipolar ionization air purifiers</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Full duct cleaning, sealing &amp; rebalancing</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Schedule an Audit</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 06 — MAINTENANCE ================= -->
+<section id="maintenance" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">06 / Design</span>
+      <h2>Design Consultation —<br>Set It &amp; Forget It.</h2>
+      <span class="meta">3D Visualization &middot; Material Selection</span>
+    </div>
+    <div class="grid-2">
+      <div style="order:2;"><img src="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/service-6.png" alt="Technician performing seasonal Remodeling tune-up"></div>
+      <div style="order:1;">
+        <p class="lead">Most breakdowns aren't surprises — they're missed maintenance. Two visits a year, priority dispatch, no overtime fees, cancel anytime.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">Member Benefits</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Spring AC + Fall furnace tune-up (21-point each)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Front-of-the-line dispatch &mdash; you skip the queue</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 15% off all repairs, no overtime fees ever</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Cancel anytime &mdash; no contracts, no penalties</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Join The Plan</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
 <section class="section">
-  <div class="container" style="max-width:820px; text-align:center;">
-    <span class="eyebrow">Full-Service Design-Build</span>
-    <h2>From First Sketch to Final Detail</h2>
-    <p>Our work spans the whole range of residential remodeling — from individual rooms to comprehensive whole-home transformations. Whatever the scope, you'll work with one team, one schedule, and one fixed price.</p>
-    <p>Below are the six core services we offer. Each one is backed by in-house design, experienced carpenters, licensed trade partners, and our lifetime workmanship warranty.</p>
-  </div>
-</section>
-
-<!-- Service One -->
-<section id="service-one" class="section bg-alt">
   <div class="container">
-    <div class="grid-2">
-      <div>
-        <span class="eyebrow">Service One</span>
-        <h2>Service One</h2>
-        <p>A thoughtful, end-to-end approach to Service One — combining considered design, skilled construction, and finishes that stand the test of time. Every project begins with understanding how you live and how you want the space to work.</p>
-        <p>We handle the full scope so you don't have to coordinate trades or chase subcontractors. One team, one plan, one beautifully finished room.</p>
-        <p><strong>What's included:</strong></p>
-        <ul class="checklist">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Initial design consultation and planning</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>3D renderings and material selections</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Permit coordination and inspections</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Construction, finishing, and final walkthrough</li>
-        </ul>
-        <div style="margin-top:1.5rem;"><a href="quote.html" class="btn btn-primary">Get a Quote</a></div>
-      </div>
-      <div><img src="assets/images/service-1.png" alt="Remodeling service one project example" style="border-radius:12px;"></div>
+    <div class="sec-head">
+      <span class="idx">07 / Why Us</span>
+      <h2>Work That<br>Holds Up.</h2>
+      <span class="meta">No Calls Twice</span>
     </div>
-  </div>
-</section>
-
-<!-- Service Two -->
-<section id="service-two" class="section">
-  <div class="container">
-    <div class="grid-2">
-      <div><img src="assets/images/service-2.png" alt="Remodeling service two project example" style="border-radius:12px;"></div>
-      <div>
-        <span class="eyebrow">Service Two</span>
-        <h2>Service Two</h2>
-        <p>Detail-driven renovations for Service Two — brought to life by experienced designers who sweat the small decisions so the big ones feel effortless. You'll see your project in renderings before a single tool is lifted.</p>
-        <p>Tailored options that match your style, your budget, and the way you actually use the space.</p>
-        <p><strong>What's included:</strong></p>
-        <ul class="checklist">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Layout optimization and space planning</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Premium material and finish selection</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Custom cabinetry and millwork</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Daily cleanup and protected work zones</li>
-        </ul>
-        <div style="margin-top:1.5rem;"><a href="quote.html" class="btn btn-primary">Get a Quote</a></div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div>
+        <h3>Flat-Rate Pricing</h3>
+        <p style="color:var(--ink-soft);">Know the number before the work starts. The invoice matches the quote &mdash; that's the deal.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>On-Time Completion</h3>
+        <p style="color:var(--ink-soft);">Most visits booked by noon are on the schedule that afternoon. 24/7 for emergencies.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Workmanship Guarantee</h3>
+        <p style="color:var(--ink-soft);">If something we did isn't right, one call brings us back. Lifetime workmanship guarantee on installs.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <h3>Vetted Technicians</h3>
+        <p style="color:var(--ink-soft);">Background-checked, drug-tested, NATE-certified, and uniformed. Never sub-contracted.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2 4 4 8-8 4 4"/></svg></div>
+        <h3>Zero Pressure</h3>
+        <p style="color:var(--ink-soft);">No commission-driven sales scripts. We tell you what we'd do in our own home, then leave.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Real People Answer</h3>
+        <p style="color:var(--ink-soft);">No phone trees, no offshore call centers. Local dispatchers who know the techs by name.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Service Three -->
-<section id="service-three" class="section bg-alt">
-  <div class="container">
-    <div class="grid-2">
-      <div>
-        <span class="eyebrow">Service Three</span>
-        <h2>Service Three</h2>
-        <p>Service Three done right — a unified look and feel carried from room to room. We take the time to understand the rhythm of your home so every improvement feels like it's always belonged.</p>
-        <p>Ideal for homeowners who want a cohesive result rather than a patchwork of quick fixes.</p>
-        <p><strong>What's included:</strong></p>
-        <ul class="checklist">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Whole-home design vision and palette</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Coordinated phasing to minimize disruption</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Fixed-price proposal before work begins</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Dedicated project manager throughout</li>
-        </ul>
-        <div style="margin-top:1.5rem;"><a href="quote.html" class="btn btn-primary">Get a Quote</a></div>
-      </div>
-      <div><img src="assets/images/service-3.png" alt="Remodeling service three project example" style="border-radius:12px;"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Service Four -->
-<section id="service-four" class="section">
-  <div class="container">
-    <div class="grid-2">
-      <div><img src="assets/images/service-4.png" alt="Remodeling service four project example" style="border-radius:12px;"></div>
-      <div>
-        <span class="eyebrow">Service Four</span>
-        <h2>Service Four</h2>
-        <p>Service Four with an eye on longevity. We combine timeless design choices with modern building science to create spaces that still feel right a decade from now — not just on opening day.</p>
-        <p>Built to last, designed to delight.</p>
-        <p><strong>What's included:</strong></p>
-        <ul class="checklist">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Durable, premium-grade materials</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Energy-efficient systems and insulation</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Lifetime workmanship warranty</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Manufacturer warranty registration</li>
-        </ul>
-        <div style="margin-top:1.5rem;"><a href="quote.html" class="btn btn-primary">Get a Quote</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Service Five -->
-<section id="service-five" class="section bg-alt">
-  <div class="container">
-    <div class="grid-2">
-      <div>
-        <span class="eyebrow">Service Five</span>
-        <h2>Service Five</h2>
-        <p>When your home is almost perfect but missing a few square feet or a key connection to the outdoors, Service Five is the answer. We add, expand, and reconfigure to make the house you have feel like the house you wish you had.</p>
-        <p>Structural work handled in-house, with zero hand-offs.</p>
-        <p><strong>What's included:</strong></p>
-        <ul class="checklist">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Structural engineering and approvals</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Seamless exterior integration</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>HVAC, electrical, and plumbing extension</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Clean, protected work zones</li>
-        </ul>
-        <div style="margin-top:1.5rem;"><a href="quote.html" class="btn btn-primary">Get a Quote</a></div>
-      </div>
-      <div><img src="assets/images/service-5.png" alt="Remodeling service five project example" style="border-radius:12px;"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Service Six -->
-<section id="service-six" class="section">
-  <div class="container">
-    <div class="grid-2">
-      <div><img src="assets/images/service-6.png" alt="Remodeling service six project example" style="border-radius:12px;"></div>
-      <div>
-        <span class="eyebrow">Service Six</span>
-        <h2>Service Six</h2>
-        <p>Custom Service Six — because some projects deserve something bespoke. Whether it's a built-in that solves a specific storage problem or a feature that becomes the heart of the home, we build what others can't source.</p>
-        <p>Handcrafted in our shop and installed by the people who built it.</p>
-        <p><strong>What's included:</strong></p>
-        <ul class="checklist">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Bespoke design development</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>In-shop fabrication</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Precision site installation</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Finish-level detailing and touch-up</li>
-        </ul>
-        <div style="margin-top:1.5rem;"><a href="quote.html" class="btn btn-primary">Get a Quote</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Comparison band -->
-<section class="section bg-alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Why Homeowners Choose Us</span>
-      <h2>The Difference Is in the Details</h2>
-    </div>
-    <div class="grid-3" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
-      <div class="value-card card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3>Fixed Pricing</h3><p>No change-order surprises. Your estimate is your price.</p></div>
-      <div class="value-card card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>On-Time Schedules</h3><p>We hit our completion dates. Ask to see our track record.</p></div>
-      <div class="value-card card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Lifetime Warranty</h3><p>Workmanship covered for as long as you own the home.</p></div>
-      <div class="value-card card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><h3>One Point of Contact</h3><p>Your project manager answers every call directly.</p></div>
-    </div>
-  </div>
-</section>
-
+<!-- ================= CTA ================= -->
 <section class="cta-band">
   <div class="container">
-    <h2>Ready to Talk Through Your Project?</h2>
-    <p>We'll come to your home, measure, and give you honest feedback — no pressure, no charge.</p>
-    <a href="quote.html" class="btn btn-primary">Schedule a Consultation</a>
+    <div>
+      <span class="eyebrow" style="color:var(--orange);">08 / Get Started</span>
+      <h2>Need It Fixed Today?</h2>
+      <p>Most same-day visits are booked by noon. Tell us what's going on and we'll lock in a window.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0.875rem;">
+      <a href="tel:[Phone Number]" class="btn btn-primary btn-lg">Call [Phone Number]</a>
+      <a href="quote.html" class="btn btn-outline-white btn-lg">Request a Visit</a>
+    </div>
   </div>
 </section>
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div><div class="logo">[Your Company Name]<small>Design · Build · Renew</small></div><p style="color:rgba(255,255,255,0.7); font-size:0.9375rem;">Locally owned design-build remodelers serving [Service Region] since [Year Founded]. Licensed & Insured · License #[XXXXXX]</p></div>
-      <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Services</h4><ul><li><a href="services.html#service-one">Service One</a></li><li><a href="services.html#service-two">Service Two</a></li><li><a href="services.html#service-three">Service Three</a></li><li><a href="services.html#service-four">Service Four</a></li><li><a href="services.html#service-five">Service Five</a></li><li><a href="services.html#service-six">Service Six</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="tel:[Phone Number]">[Phone Number]</a></li><li><a href="mailto:[Email]">[Email]</a></li><li>[Street Address]<br>[City, State ZIP]</li><li style="margin-top:0.75rem;">Mon–Fri 8am–5pm<br>Sat by appointment</li></ul></div>
+      <div>
+        <div class="logo-name">[Your Company Name]</div>
+        <div class="logo-tag">Kitchen &middot; Bath &middot; Whole-Home Remodels</div>
+        <p style="margin-top:1rem;color:rgba(255,255,255,0.7);max-width:36ch;">Family-owned remodeling company serving [Service Region] since [Year Founded]. Honest work, fair pricing, and a guarantee behind every job.</p>
+        <p style="font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:1rem;">Lic #[License #] &middot; Insured &middot; Bonded</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#kitchen">Kitchen Remodels</a></li>
+          <li><a href="services.html#bath">Bath Remodels</a></li>
+          <li><a href="services.html#cabinets">Cabinets &amp; Refacing</a></li>
+          <li><a href="services.html#counters">Countertops &amp; Surfaces</a></li>
+          <li><a href="services.html#tile">Custom Tile &amp; Stone</a></li>
+          <li><a href="services.html#design">Design Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <ul>
+          <li><a href="tel:[Phone Number]" style="font-family:var(--font-heading);font-weight:700;color:#fff;font-size:1.125rem;">[Phone Number]</a></li>
+          <li><a href="mailto:[Email]">[Email]</a></li>
+          <li>[Street Address]<br>[City, State ZIP]</li>
+          <li style="margin-top:0.75rem;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Mon&ndash;Fri 7a&ndash;7p &middot; Sat 8a&ndash;4p<br>15-Yr Workmanship Dispatch</li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
       <div class="social-row">
-        <a href="#" class="social-icon" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg></a>
-        <a href="#" class="social-icon" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-        <a href="#" class="social-icon" aria-label="Google"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1h-9.17v2.96h5.27c-.23 1.47-1.67 4.3-5.27 4.3-3.17 0-5.76-2.62-5.76-5.86s2.59-5.86 5.76-5.86c1.8 0 3.02.77 3.71 1.43l2.53-2.44C16.77 4.24 14.7 3.3 12.18 3.3 6.98 3.3 2.75 7.53 2.75 12.5s4.23 9.2 9.43 9.2c5.45 0 9.05-3.83 9.05-9.22 0-.62-.07-1.1-.13-1.48z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Google"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 11h-10v2.5h5.7c-.5 2.8-2.8 4.5-5.7 4.5-3.4 0-6.2-2.8-6.2-6.2s2.8-6.2 6.2-6.2c1.5 0 2.9.6 4 1.5l1.9-1.9C16 3.6 14.1 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.7-3.6 8.7-8.7 0-.4 0-.9-.1-1.3z"/></svg></a>
       </div>
-      <div>© [Year] [Your Company Name]. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+      <div>&copy; <span data-year>2026</span> [Your Company Name] &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></div>
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/js/main.js?v=3" defer></script>
 </body>
 </html>

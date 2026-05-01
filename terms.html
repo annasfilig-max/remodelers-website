@@ -3,98 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service | [Your Company Name] — Remodeling Contractor in [City]</title>
-<meta name="description" content="Terms of service for the [Your Company Name] website. Your rights, responsibilities, and the terms that govern your use of our site.">
+<title>Terms of Service | [Your Company Name] — Remodeling in [City, State ZIP]</title>
+<meta name="description" content="The terms that apply when you use the [Your Company Name] website or request service. Plain-English summary of your rights and our responsibilities.">
 <link rel="canonical" href="[https://yourdomain.com]/terms.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Terms of Service | [Your Company Name]">
-<meta property="og:description" content="Site terms of service and usage conditions.">
-<meta property="og:image" content="[https://yourdomain.com]/assets/images/hero.png">
+<meta property="og:description" content="Terms governing use of the [Your Company Name] website.">
 <meta property="og:url" content="[https://yourdomain.com]/terms.html">
+<meta property="og:image" content="https://yourdomain.com/assets/images/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/favicon.svg">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config = { corePlugins: { preflight: false } }</script>
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/css/styles.css?v=3">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"[https://yourdomain.com]/"},{"@type":"ListItem","position":2,"name":"Terms","item":"[https://yourdomain.com]/terms.html"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"[https://yourdomain.com]/index.html"},{"@type":"ListItem","position":2,"name":"Terms","item":"[https://yourdomain.com]/terms.html"}]}
 </script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<!-- ================= JT MARKETING PROMO BANNER ================= -->
+<div id="jtm-promo-banner" role="note" aria-label="Preview by JT Marketing">
+  <span class="jtm-promo-inner">
+    <svg class="jtm-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.4 20 12 16.7 6.6 20 8 13.4 3 9l6.4-.7L12 2z"/></svg>
+    <span class="jtm-promo-text">This site could be yours.</span>
+    <span class="jtm-promo-sep" aria-hidden="true"></span>
+    <span class="jtm-promo-credit">Built by <b>JT Marketing</b></span>
+  </span>
+  <button type="button" class="jtm-close" aria-label="Dismiss" onclick="this.parentElement.style.display='none'">&times;</button>
+</div>
+
+<!-- ================= HEADER ================= -->
 <header class="site-header">
-  <div class="container nav-wrap">
-    <a href="index.html" class="logo">[Your Company Name]<small>Design · Build · Renew</small></a>
-    <nav class="nav-main" aria-label="Primary"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="service-areas.html">Service Areas</a><a href="gallery.html">Gallery</a><a href="testimonials.html">Reviews</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
-    <div class="nav-right"><a href="tel:[Phone Number]" class="nav-phone"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> [Phone Number]</a><a href="quote.html" class="btn btn-primary">Get a Free Quote</a></div>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="[Your Company Name] home">
+      <span class="logo-name">[Your Company Name]</span>
+      <span class="logo-tag">Kitchen &middot; Bath &middot; Whole-Home Remodels</span>
+    </a>
+    <nav class="nav-main" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:[Phone Number]" class="header-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        [Phone Number]
+      </a>
+      <a href="quote.html" class="btn btn-primary">Free Quote</a>
+    </div>
+    <button class="hamburger" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
-  <div class="mobile-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="service-areas.html">Service Areas</a><a href="gallery.html">Gallery</a><a href="testimonials.html">Reviews</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="quote.html" class="btn btn-primary">Get a Free Quote</a></div>
 </header>
 
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+  <div class="mobile-menu-head">
+    <span class="logo-name">[Your Company Name]</span>
+    <button class="hamburger" data-menu-close aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile primary"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <div class="mobile-menu-footer">
+    <a href="tel:[Phone Number]" class="btn btn-outline-white">Call [Phone Number]</a>
+    <a href="quote.html" class="btn btn-primary">Free Quote</a>
+  </div>
+</div>
+
 <main id="main">
+
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> › Terms</div>
-    <h1>Terms of Service</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Terms</div>
+    <h1>Terms<br><em style="color:var(--orange);font-style:normal;">of Service.</em></h1>
+    <p style="color:rgba(255,255,255,0.78);max-width:580px;margin:1rem 0 0;font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;">Effective Date &middot; [Effective Date]</p>
   </div>
 </section>
 
-<section class="section article-body">
-  <div class="container" style="max-width:760px;">
-    <p><em>Effective date: [Effective Date]</em></p>
-    <p>Welcome to the [Your Company Name] website. By accessing or using this site, you agree to be bound by the terms outlined below. If you do not agree with any portion of these terms, please do not use the site.</p>
+<section class="section">
+  <div class="container article-body">
+    <p>These Terms of Service ("Terms") govern your use of the [Your Company Name] website and any related services we provide. By using the site you agree to these Terms. If you don't agree, please don't use the site.</p>
 
     <h2>Use of the Site</h2>
-    <p>You may use this site for lawful personal, non-commercial purposes and to learn about our services. You agree not to misuse the site, interfere with its operation, or attempt to access any portion of the site or underlying systems through unauthorized means. You further agree not to use any automated scraping, harvesting, or similar tool on the site without our prior written consent.</p>
+    <p>You may use the site for personal, non-commercial purposes in accordance with these Terms and any applicable laws. You agree not to use the site in a way that could damage, disable, overburden, or impair it, or interfere with anyone else's use of it. You also agree not to attempt to gain unauthorized access to any portion of the site or to any related systems.</p>
 
     <h2>Intellectual Property</h2>
-    <p>All content on this site — including text, images, graphics, logos, layouts, and code — is the property of [Your Company Name] or its licensors, and is protected by copyright, trademark, and other intellectual property laws. You may view and print pages for personal, non-commercial reference. Any other use, including reproduction, distribution, modification, or republication without our prior written permission, is prohibited.</p>
+    <p>The site and its content — including text, graphics, logos, images, and code — are owned by [Your Company Name] or its licensors and are protected by copyright, trademark, and other applicable laws. You may view and print pages for your personal use but may not copy, modify, distribute, or create derivative works from any part of the site without our prior written permission.</p>
 
-    <h2>No Professional Advice</h2>
-    <p>Content on this site, including blog articles and general guidance, is provided for informational purposes only. It does not constitute professional, legal, or construction advice, and should not be relied on as a substitute for an on-site consultation with a qualified contractor. Always consult with a licensed professional before beginning any renovation work.</p>
+    <h2>Quotes, Estimates, and Service</h2>
+    <p>Any quote or estimate we provide is based on the information we have at the time it is issued and remains valid for the period stated in the quote. Final pricing depends on the specifics of your job, which may only be fully visible once work begins. We will communicate any material changes to the scope or price before proceeding with additional work.</p>
 
     <h2>Disclaimers</h2>
-    <p>The site is provided "as is" and "as available," without warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the site will be uninterrupted, error-free, secure, or free of viruses or other harmful components. Project timelines, pricing, and availability referenced on the site are general in nature and may change without notice.</p>
+    <p>The site is provided on an "as is" and "as available" basis. While we try to keep the content accurate, we make no warranty that it is error-free, complete, or up to date. Use of the site is at your own risk. To the extent permitted by law, we disclaim all warranties, express or implied, regarding the site and its content.</p>
 
     <h2>Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, [Your Company Name] and its owners, employees, and affiliates are not liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of this site, including loss of data, loss of revenue, or business interruption — even if we have been advised of the possibility of such damages. Our total aggregate liability for any claim related to this site is limited to the greater of one hundred U.S. dollars ($100) or the amount you paid us, if any, for access to the site in the twelve months preceding the claim.</p>
+    <p>To the fullest extent permitted by applicable law, [Your Company Name] and its owners, employees, and affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, arising from your use of the site. Our total liability for any claim arising out of or relating to the site will not exceed the greater of the amount you paid us in the twelve months preceding the claim, or one hundred U.S. dollars.</p>
 
-    <h2>Third-Party Links</h2>
-    <p>This site may contain links to third-party websites that are not operated by us. We are not responsible for the content, policies, or practices of those sites, and we encourage you to review their terms and privacy policies before using them.</p>
-
-    <h2>Changes to These Terms</h2>
-    <p>We may update these Terms from time to time. When we do, we will revise the "Effective date" above. Your continued use of the site after changes are posted constitutes acceptance of the updated Terms.</p>
+    <h2>Links to Third-Party Sites</h2>
+    <p>The site may contain links to third-party websites. We don't control those sites and aren't responsible for their content or practices. Visiting them is at your own discretion and subject to their terms.</p>
 
     <h2>Governing Law</h2>
-    <p>These Terms are governed by and construed in accordance with the laws of the State of [State], without regard to its conflict-of-laws principles. Any disputes arising out of these Terms or your use of this site shall be resolved in the state or federal courts located in [State], and you consent to the personal jurisdiction of those courts.</p>
+    <p>These Terms are governed by the laws of the State of [State], without regard to its conflict-of-law principles. Any dispute arising from these Terms or your use of the site will be resolved in the state or federal courts located in [State].</p>
+
+    <h2>Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. When we do, we'll revise the effective date at the top. Continuing to use the site after changes become effective means you accept the updated Terms.</p>
 
     <h2>Contact Us</h2>
-    <p>Questions about these Terms? Contact us at <a href="mailto:[Email]">[Email]</a> or [Phone Number].</p>
+    <p>Questions about these Terms? Reach us at <a href="mailto:[Email]">[Email]</a> or <a href="tel:[Phone Number]">[Phone Number]</a>, or by mail at [Street Address], [City, State ZIP].</p>
   </div>
 </section>
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div><div class="logo">[Your Company Name]<small>Design · Build · Renew</small></div><p style="color:rgba(255,255,255,0.7); font-size:0.9375rem;">Locally owned design-build remodelers serving [Service Region] since [Year Founded]. Licensed & Insured · License #[XXXXXX]</p></div>
-      <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Services</h4><ul><li><a href="services.html#service-one">Service One</a></li><li><a href="services.html#service-two">Service Two</a></li><li><a href="services.html#service-three">Service Three</a></li><li><a href="services.html#service-four">Service Four</a></li><li><a href="services.html#service-five">Service Five</a></li><li><a href="services.html#service-six">Service Six</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="tel:[Phone Number]">[Phone Number]</a></li><li><a href="mailto:[Email]">[Email]</a></li><li>[Street Address]<br>[City, State ZIP]</li><li style="margin-top:0.75rem;">Mon–Fri 8am–5pm<br>Sat by appointment</li></ul></div>
+      <div>
+        <div class="logo-name">[Your Company Name]</div>
+        <div class="logo-tag">Kitchen &middot; Bath &middot; Whole-Home Remodels</div>
+        <p style="margin-top:1rem;color:rgba(255,255,255,0.7);max-width:36ch;">Family-owned remodeling company serving [Service Region] since [Year Founded]. Honest work, fair pricing, and a guarantee behind every job.</p>
+        <p style="font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:1rem;">Lic #[License #] &middot; Insured &middot; Bonded</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#kitchen">Kitchen Remodels</a></li>
+          <li><a href="services.html#bath">Bath Remodels</a></li>
+          <li><a href="services.html#cabinets">Cabinets &amp; Refacing</a></li>
+          <li><a href="services.html#counters">Countertops &amp; Surfaces</a></li>
+          <li><a href="services.html#tile">Custom Tile &amp; Stone</a></li>
+          <li><a href="services.html#design">Design Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <ul>
+          <li><a href="tel:[Phone Number]" style="font-family:var(--font-heading);font-weight:700;color:#fff;font-size:1.125rem;">[Phone Number]</a></li>
+          <li><a href="mailto:[Email]">[Email]</a></li>
+          <li>[Street Address]<br>[City, State ZIP]</li>
+          <li style="margin-top:0.75rem;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Mon&ndash;Fri 7a&ndash;7p &middot; Sat 8a&ndash;4p<br>15-Yr Workmanship Dispatch</li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
       <div class="social-row">
-        <a href="#" class="social-icon" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg></a>
-        <a href="#" class="social-icon" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-        <a href="#" class="social-icon" aria-label="Google"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1h-9.17v2.96h5.27c-.23 1.47-1.67 4.3-5.27 4.3-3.17 0-5.76-2.62-5.76-5.86s2.59-5.86 5.76-5.86c1.8 0 3.02.77 3.71 1.43l2.53-2.44C16.77 4.24 14.7 3.3 12.18 3.3 6.98 3.3 2.75 7.53 2.75 12.5s4.23 9.2 9.43 9.2c5.45 0 9.05-3.83 9.05-9.22 0-.62-.07-1.1-.13-1.48z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Google"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 11h-10v2.5h5.7c-.5 2.8-2.8 4.5-5.7 4.5-3.4 0-6.2-2.8-6.2-6.2s2.8-6.2 6.2-6.2c1.5 0 2.9.6 4 1.5l1.9-1.9C16 3.6 14.1 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.7-3.6 8.7-8.7 0-.4 0-.9-.1-1.3z"/></svg></a>
       </div>
-      <div>© [Year] [Your Company Name]. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+      <div>&copy; <span data-year>2026</span> [Your Company Name] &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></div>
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/js/main.js?v=3" defer></script>
 </body>
 </html>
