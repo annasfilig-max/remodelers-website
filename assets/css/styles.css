@@ -70,9 +70,10 @@
   --font-mono:    'JetBrains Mono', ui-monospace, monospace;
 
   --shadow-card: 0 1px 0 var(--line);
-  --radius-card: 10px;
-  --radius-btn:  8px;
+  --radius-card: 18px;
+  --radius-btn:  12px;
   --radius-pill: 999px;
+  --radius-sm:   10px;
 
   --max-w: 1320px;
   --section-py: 7rem;
@@ -2142,6 +2143,99 @@ img { max-width: 100%; height: auto; display: block; }
   background-position: 0 50%;
   padding: 0 0.5rem;
 }
+
+/* ============================================================
+   EXTRA SOFTNESS — bigger rounding everywhere
+   ============================================================ */
+.btn { border-radius: var(--radius-btn); }
+.card, .svc-card, .svc-wide, .testimonial, .port-tile, .gallery-item,
+.team-card, .hero-split-img, .about-strip .col-img,
+.cta-band--form .form, .city-grid {
+  border-radius: var(--radius-card);
+}
+.svc-wide .svc-wide-img { border-radius: var(--radius-card) 0 0 var(--radius-card); }
+@media (max-width: 639px) { .svc-wide .svc-wide-img { border-radius: var(--radius-card) var(--radius-card) 0 0; } }
+.hero-split-tag { border-radius: var(--radius-sm); }
+.form-group input, .form-group select, .form-group textarea { border-radius: var(--radius-sm); }
+.icon-circle { border-radius: 14px; }
+.avatar { border-radius: 10px; }
+.city-card { border-radius: 0; }
+.city-grid > .city-card:first-child { border-top-left-radius: var(--radius-card); }
+.city-grid > .city-card:nth-child(4) { border-top-right-radius: var(--radius-card); }
+.city-grid > .city-card:nth-last-child(4) { border-bottom-left-radius: var(--radius-card); }
+.city-grid > .city-card:last-child { border-bottom-right-radius: var(--radius-card); }
+.gallery-filters button { border-radius: var(--radius-pill); }
+.hamburger, .theme-toggle, .lightbox-close, .lightbox-nav { border-radius: 12px; }
+.theme-toggle { border-radius: var(--radius-pill); }
+#jtm-promo-banner .jtm-promo-chip { border-radius: 6px; }
+#jtm-promo-banner .jtm-close { border-radius: 8px; }
+.social-row a { border-radius: 10px; }
+.carousel-btn { border-radius: 12px; }
+.faq-item { border-radius: 0; }
+.feature-list li { border-radius: 0; }
+.stats-row { border-radius: var(--radius-card); overflow: hidden; }
+.process-row { border-radius: var(--radius-card); overflow: hidden; }
+.about-strip { border-radius: 0; }
+
+/* Even softer card hover shadows (more blur, less harsh) */
+.svc-wide:hover, .card:hover, .testimonial:hover, .team-card:hover {
+  box-shadow:
+    0 32px 80px -10px rgba(0, 0, 0, 0.65),
+    0 0 0 1px var(--brass),
+    0 0 40px var(--brass-glow);
+}
+.port-tile:hover {
+  box-shadow:
+    0 32px 70px -10px rgba(0, 0, 0, 0.65),
+    0 0 0 1px var(--brass);
+}
+
+/* ============================================================
+   LIGHT-MODE TEXT CONTRAST FIXES
+   force-dark text wherever hardcoded white was used
+   ============================================================ */
+:root[data-theme="light"] .hero-split-text .lead,
+:root[data-theme="light"] .hero p.lead,
+:root[data-theme="light"] .hero .lead {
+  color: var(--ink-muted) !important;
+}
+:root[data-theme="light"] .trust-strip > div { color: var(--ink-muted) !important; }
+:root[data-theme="light"] .trust-strip { border-top-color: var(--line) !important; }
+:root[data-theme="light"] .hero-badge {
+  color: var(--ink-muted) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: var(--line) !important;
+}
+:root[data-theme="light"] .hero-badge .y { color: var(--ink) !important; }
+:root[data-theme="light"] .page-hero h1 { color: var(--ink) !important; }
+:root[data-theme="light"] .page-hero p,
+:root[data-theme="light"] .page-hero .breadcrumb { color: var(--ink-muted) !important; }
+:root[data-theme="light"] .hero-split-tag-label { color: var(--ink) !important; }
+:root[data-theme="light"] .hero-split-tag {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: var(--line) !important;
+}
+
+/* Inline-styled white text (in HTML) — catch via attribute selectors */
+:root[data-theme="light"] [style*="rgba(255,255,255,0.7)"],
+:root[data-theme="light"] [style*="rgba(255,255,255,0.78)"],
+:root[data-theme="light"] [style*="rgba(255,255,255,0.85)"],
+:root[data-theme="light"] [style*="rgba(255,255,255,0.88)"],
+:root[data-theme="light"] [style*="rgba(255,255,255,0.92)"] {
+  color: var(--ink-muted) !important;
+}
+:root[data-theme="light"] [style*="color:#fff"],
+:root[data-theme="light"] [style*="color: #fff"] {
+  color: var(--ink) !important;
+}
+
+/* Form inside dark cta-band (which becomes light) */
+:root[data-theme="light"] .cta-band--form .form { background: var(--bg-card); border: 1px solid var(--line); }
+:root[data-theme="light"] .cta-direct-num { color: var(--ink); }
+:root[data-theme="light"] .cta-direct-label { color: var(--ink-faint); }
+
+/* Service cards (dark photos with white text) — keep dark inside even in light mode for legibility */
+.svc-card, .port-tile { /* no light override needed — bg image keeps cards dark */ }
 
 /* ---------- GHL embed overrides ---------- */
 .hl_page-preview--content,
