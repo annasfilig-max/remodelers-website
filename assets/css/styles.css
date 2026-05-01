@@ -70,8 +70,9 @@
   --font-mono:    'JetBrains Mono', ui-monospace, monospace;
 
   --shadow-card: 0 1px 0 var(--line);
-  --radius-card: 2px;
-  --radius-btn:  0;
+  --radius-card: 10px;
+  --radius-btn:  8px;
+  --radius-pill: 999px;
 
   --max-w: 1320px;
   --section-py: 7rem;
@@ -299,7 +300,7 @@ img { max-width: 100%; height: auto; display: block; }
   width: 44px; height: 44px;
   background: transparent;
   border: 1px solid var(--line);
-  border-radius: 0;
+  border-radius: 8px;
   cursor: pointer;
   color: var(--ink);
   transition: border-color 150ms ease, color 150ms ease;
@@ -1888,6 +1889,97 @@ img { max-width: 100%; height: auto; display: block; }
 :root[data-theme="light"] .stat-num,
 :root[data-theme="light"] .step h3,
 :root[data-theme="light"] .testimonial-meta strong { color: var(--ink); }
+
+
+/* ============================================================
+   SOFTEN — round corners + warmer shadows
+   ============================================================ */
+.btn { border-radius: var(--radius-btn); }
+.card,
+.svc-card,
+.svc-wide,
+.testimonial,
+.port-tile,
+.gallery-item,
+.team-card,
+.hero-split-img,
+.hero-split-tag,
+.about-strip .col-img {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+.svc-wide .svc-wide-img { border-top-left-radius: var(--radius-card); border-bottom-left-radius: var(--radius-card); }
+.svc-wide-grid { gap: 1.5rem; }
+.portfolio-grid { gap: 1rem; }
+@media (min-width: 640px) { .portfolio-grid { gap: 1.25rem; } }
+.gallery-grid { gap: 1rem; }
+
+.form-group input,
+.form-group select,
+.form-group textarea { border-radius: 8px; }
+
+.hero-badge,
+.hero-split-tag { border-radius: 8px; }
+
+.cta-band--form .form { border-radius: var(--radius-card); }
+
+.city-grid { border-radius: var(--radius-card); overflow: hidden; }
+.gallery-filters button { border-radius: var(--radius-pill); padding: 0.625rem 1.5rem; }
+
+.icon-circle { border-radius: 12px; }
+.avatar { border-radius: 8px; }
+
+#jtm-promo-banner .jtm-promo-chip { border-radius: 4px; }
+#jtm-promo-banner .jtm-close { border-radius: 6px; }
+
+.social-row a { border-radius: 8px; }
+
+.hamburger { border-radius: 8px; }
+
+/* Soften shadows */
+.card:hover,
+.svc-wide:hover,
+.port-tile:hover {
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.55);
+}
+
+/* Subtle inner glow on hover for primary cards */
+.svc-wide, .card, .testimonial {
+  box-shadow: 0 1px 0 var(--line-soft);
+}
+
+/* ============================================================
+   FLOATING THEME TOGGLE (bottom-right, always visible)
+   ============================================================ */
+.theme-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 90;
+  width: 48px; height: 48px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.02) inset;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 180ms cubic-bezier(0.2,0.8,0.2,1), border-color 150ms ease, color 150ms ease, box-shadow 200ms ease;
+}
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--brass);
+  color: var(--brass);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45), 0 0 0 4px var(--brass-subtle);
+}
+.theme-toggle .ico-sun,
+.theme-toggle .ico-moon { width: 18px; height: 18px; }
+@media (max-width: 1023px) {
+  .header-cta .theme-toggle { display: inline-flex; }
+}
+:root[data-theme="light"] .theme-toggle {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 22px rgba(20, 23, 28, 0.12);
+}
 
 /* ---------- GHL embed overrides ---------- */
 .hl_page-preview--content,
