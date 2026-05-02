@@ -2223,6 +2223,50 @@ img { max-width: 100%; height: auto; display: block; }
   }
 }
 
+/* ============================================================
+   GHL CONTAINER OVERRIDES — force dark bg on every wrapper GHL injects
+   ============================================================ */
+html, body,
+#__nuxt, #__nuxt > div, #preview-container,
+.hl_page-preview, .hl_page-preview--content, .bg-fixed, .bgCover,
+[class*="hl_page"], [class*="hl_main"], [id*="hl_main"],
+[class^="section-"], [id^="section-"],
+[class^="row-"], [id^="row-"],
+[class^="col-"], [id^="col-"],
+[class*="c-section"], [class*="c-row"], [class*="c-column"],
+[class*="custom-code"] {
+  background: #0a0a0a !important;
+  background-color: #0a0a0a !important;
+  color: #a3a3a3 !important;
+}
+/* But keep our intentional darker variants */
+.section-alt, .marquee, .about-strip {
+  background: #121212 !important;
+  background-color: #121212 !important;
+}
+.cta-band, .hero-split {
+  background: #0a0a0a !important;
+  background-color: #0a0a0a !important;
+}
+/* Nav links — force white over GHL link defaults */
+.nav-main a, .nav-main a:link, .nav-main a:visited {
+  color: #fafafa !important;
+}
+.nav-main a[aria-current="page"] { color: #4870A8 !important; }
+/* Logo + header phone in their right colors */
+.logo-name { color: #fafafa !important; }
+.logo-tag { color: #4870A8 !important; }
+.header-phone { color: #fafafa !important; }
+/* H1/H2 white — GHL might apply dark default colors */
+h1, h2, h3, h4 { color: #fafafa !important; }
+/* Section title within sec-head should be white */
+.sec-head h2, .sec-head .idx, .sec-head .meta { color: inherit !important; }
+.sec-head .idx, .sec-head .meta { color: #4870A8 !important; }
+.sec-head .meta { color: #6b6b6b !important; }
+/* Keep service/portfolio card text readable on photo */
+.svc-wide-body h3, .svc-card h3 { color: #fafafa !important; }
+.svc-wide-body p { color: #a3a3a3 !important; }
+
 /* ---------- GHL embed overrides ---------- */
 .hl_page-preview--content,
 [id^="section-"],
