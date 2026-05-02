@@ -1735,10 +1735,10 @@ img { max-width: 100%; height: auto; display: block; }
 /* ============================================================
    REVEAL ANIMATIONS (Coconut-style scroll-trigger)
    ============================================================ */
-.reveal,
-.fade-in,
-.sec-head,
-.svc-card,
+.has-js .reveal,
+.has-js .fade-in,
+.has-js .sec-head,
+.has-js .svc-card,
 .svc-wide,
 .port-tile,
 .stat,
@@ -2343,19 +2343,19 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-split-tag { animation: float-gentle 5s ease-in-out infinite; }
 
 /* Slide-in reveal variants (for staggered side-entry) */
-.reveal-left  { opacity: 0; transform: translateX(-50px); transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
-.reveal-right { opacity: 0; transform: translateX(50px);  transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
-.reveal-scale { opacity: 0; transform: scale(0.88);       transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
+.has-js .reveal-left  { opacity: 0; transform: translateX(-50px); transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
+.has-js .reveal-right { opacity: 0; transform: translateX(50px);  transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
+.has-js .reveal-scale { opacity: 0; transform: scale(0.88);       transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal-left.in-view, .reveal-right.in-view, .reveal-scale.in-view { opacity: 1; transform: none; }
 
 /* About-strip — left/right slide in */
-.about-strip .col-img  { opacity: 0; transform: translateX(-40px); transition: opacity 1000ms cubic-bezier(0.16, 1, 0.3, 1), transform 1000ms cubic-bezier(0.16, 1, 0.3, 1); }
-.about-strip .col-body { opacity: 0; transform: translateX(40px);  transition: opacity 1000ms cubic-bezier(0.16, 1, 0.3, 1) 100ms, transform 1000ms cubic-bezier(0.16, 1, 0.3, 1) 100ms; }
+.has-js .about-strip .col-img  { opacity: 0; transform: translateX(-40px); transition: opacity 1000ms cubic-bezier(0.16, 1, 0.3, 1), transform 1000ms cubic-bezier(0.16, 1, 0.3, 1); }
+.has-js .about-strip .col-body { opacity: 0; transform: translateX(40px);  transition: opacity 1000ms cubic-bezier(0.16, 1, 0.3, 1) 100ms, transform 1000ms cubic-bezier(0.16, 1, 0.3, 1) 100ms; }
 .about-strip.in-view .col-img,
 .about-strip.in-view .col-body { opacity: 1; transform: none; }
 
 /* Big quote — scale-in */
-.big-quote { opacity: 0; transform: scale(0.94); transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1), transform 900ms cubic-bezier(0.16, 1, 0.3, 1); }
+.has-js .big-quote { opacity: 0; transform: scale(0.94); transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1), transform 900ms cubic-bezier(0.16, 1, 0.3, 1); }
 .big-quote.in-view { opacity: 1; transform: none; }
 
 /* Section-alt subtle top divider */

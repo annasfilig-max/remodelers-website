@@ -1,6 +1,20 @@
 (function () {
   'use strict';
 
+  // Mark JS as ready — CSS reveal-hide rules are scoped to .has-js so that
+  // if JS fails / IntersectionObserver doesn't fire (e.g. inside a GHL iframe),
+  // content stays visible by default instead of stuck at opacity 0.
+  document.documentElement.classList.add('has-js');
+
+  // Safety net: after 2.5s, force-reveal anything still hidden in case IO never fires.
+  setTimeout(() => {
+    document.querySelectorAll(
+      '.reveal, .reveal-left, .reveal-right, .reveal-scale, .fade-in, ' +
+      '.sec-head, .svc-card, .svc-wide, .port-tile, .stat, .testimonial, ' +
+      '.step, .city-card, .team-card, .about-strip, .big-quote'
+    ).forEach(el => el.classList.add('in-view'));
+  }, 2500);
+
   // ===== Mobile menu =====
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
