@@ -1752,19 +1752,28 @@ img { max-width: 100%; height: auto; display: block; }
               transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: opacity, transform;
 }
-.reveal.in-view,
-.fade-in.in-view,
-.sec-head.in-view,
-.svc-card.in-view,
-.svc-wide.in-view,
-.port-tile.in-view,
-.stat.in-view,
-.testimonial.in-view,
-.step.in-view,
-.city-card.in-view,
-.team-card.in-view {
-  opacity: 1;
-  transform: none;
+.has-js .reveal.in-view,
+.has-js .fade-in.in-view,
+.has-js .sec-head.in-view,
+.has-js .svc-card.in-view,
+.has-js .svc-wide.in-view,
+.has-js .port-tile.in-view,
+.has-js .stat.in-view,
+.has-js .testimonial.in-view,
+.has-js .step.in-view,
+.has-js .city-card.in-view,
+.has-js .team-card.in-view {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.has-js .reveal-left.in-view,
+.has-js .reveal-right.in-view,
+.has-js .reveal-scale.in-view,
+.has-js .about-strip.in-view .col-img,
+.has-js .about-strip.in-view .col-body,
+.has-js .big-quote.in-view {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* Stagger children when their parent grid is in viewport */
