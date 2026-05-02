@@ -2230,14 +2230,22 @@ html, body,
 #__nuxt, #__nuxt > div, #preview-container,
 .hl_page-preview, .hl_page-preview--content, .bg-fixed, .bgCover,
 [class*="hl_page"], [class*="hl_main"], [id*="hl_main"],
-[class^="section-"], [id^="section-"],
-[class^="row-"], [id^="row-"],
-[class^="col-"], [id^="col-"],
+[id^="section-"], [id^="row-"], [id^="col-"],
 [class*="c-section"], [class*="c-row"], [class*="c-column"],
-[class*="custom-code"] {
+[id^="custom-code-"] {
   background: #0a0a0a !important;
   background-color: #0a0a0a !important;
   color: #a3a3a3 !important;
+}
+/* Restore background-image on our actual content elements (selector above
+   intentionally only targets GHL's auto-generated id prefixes, not class
+   prefixes — class*="col-" was matching our own .col-img and wiping the photo) */
+.col-img,
+.svc-img,
+.svc-wide-img,
+.hero-split-img img,
+.hero::before {
+  background-color: transparent !important;
 }
 /* But keep our intentional darker variants */
 .section-alt, .marquee, .about-strip {
