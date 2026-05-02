@@ -205,7 +205,7 @@
   });
 
   // ===== Scroll reveal (Coconut-style) =====
-  const reveals = document.querySelectorAll('.reveal, .fade-in, .sec-head, .svc-card, .svc-wide, .port-tile, .stat, .testimonial, .step, .city-card, .team-card');
+  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .fade-in, .sec-head, .svc-card, .svc-wide, .port-tile, .stat, .testimonial, .step, .city-card, .team-card, .about-strip, .big-quote');
   if (reveals.length && 'IntersectionObserver' in window) {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced) {
