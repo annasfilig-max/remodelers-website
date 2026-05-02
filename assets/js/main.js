@@ -198,45 +198,7 @@
     if (href === path) a.setAttribute('aria-current', 'page');
   });
 
-  // ===== Theme toggle (light/dark, persisted) =====
-  const STORAGE_KEY = 'rem-theme';
-  const root = document.documentElement;
-  const setTheme = (mode) => {
-    if (mode === 'light') root.setAttribute('data-theme', 'light');
-    else root.removeAttribute('data-theme');
-    document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
-      btn.setAttribute('aria-pressed', String(mode === 'light'));
-    });
-    try { localStorage.setItem(STORAGE_KEY, mode); } catch (_) {}
-  };
-  const stored = (() => { try { return localStorage.getItem(STORAGE_KEY); } catch (_) { return null; } })();
-  if (stored === 'light' || stored === 'dark') setTheme(stored);
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-theme-toggle]');
-    if (!btn) return;
-    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    setTheme(next);
-  });
-
-  // ===== Scroll reveal (Coconut-style) =====
-  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .fade-in, .sec-head, .svc-card, .svc-wide, .port-tile, .stat, .testimonial, .step, .city-card, .team-card, .about-strip, .big-quote');
-  if (reveals.length && 'IntersectionObserver' in window) {
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced) {
-      reveals.forEach(el => el.classList.add('in-view'));
-    } else {
-      const ro = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            ro.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-      reveals.forEach(el => ro.observe(el));
-    }
-  }
-
+  
   // ===== Scroll-triggered nav (denser bg + brass border when scrolled) =====
   const header = document.querySelector('.site-header');
   if (header) {

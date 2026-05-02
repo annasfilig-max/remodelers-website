@@ -24,21 +24,6 @@
   --hero-overlay-2: rgba(10,10,10,0.85);
 }
 
-/* ================ LIGHT THEME ================ */
-:root[data-theme="light"] {
-  --bg:          #f4f0e8;
-  --bg-2:        #ece6d9;
-  --bg-card:     #ffffff;
-  --bg-elev:     #ffffff;
-  --ink:         #14171c;
-  --ink-muted:   #4a4f57;
-  --ink-faint:   #8a8f99;
-  --line:        #d9d2c4;
-  --line-soft:   #e6e0d3;
-  --img-filter:  saturate(1) brightness(1);
-  --hero-overlay-1: rgba(20,23,28,0.30);
-  --hero-overlay-2: rgba(20,23,28,0.55);
-}
 
 :root {
 
@@ -270,7 +255,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--ink-muted);
+  color: var(--ink);
   position: relative;
   padding: 0.4rem 0;
   transition: color 120ms ease;
@@ -1826,82 +1811,6 @@ img { max-width: 100%; height: auto; display: block; }
 .btn-primary:hover::before { transform: translateX(110%); }
 
 /* ============================================================
-   THEME TOGGLE BUTTON
-   ============================================================ */
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px; height: 38px;
-  border: 1px solid var(--line);
-  background: transparent;
-  cursor: pointer;
-  color: var(--ink);
-  transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
-  padding: 0;
-  border-radius: 0;
-}
-.theme-toggle:hover { border-color: var(--brass); color: var(--brass); }
-.theme-toggle .ico-sun { display: none; }
-.theme-toggle .ico-moon { display: block; }
-:root[data-theme="light"] .theme-toggle .ico-sun { display: block; }
-:root[data-theme="light"] .theme-toggle .ico-moon { display: none; }
-@media (max-width: 1023px) {
-  .header-cta .theme-toggle { display: none; }
-}
-
-/* ============================================================
-   LIGHT-THEME ADJUSTMENTS (image filters & hero overlay)
-   ============================================================ */
-:root[data-theme="light"] body { background: var(--bg); color: var(--ink-muted); }
-:root[data-theme="light"] .site-header { background: rgba(244, 240, 232, 0.92); }
-:root[data-theme="light"] .hero::before {
-  background-image:
-    linear-gradient(180deg, rgba(20,23,28,0.18) 0%, rgba(20,23,28,0.45) 70%, var(--bg) 100%),
-    url('https://cdn.jsdelivr.net/gh/annasfilig-max/remodelers-website@main/assets/images/hero.png');
-}
-:root[data-theme="light"] .hero-split-img img,
-:root[data-theme="light"] .svc-wide-img,
-:root[data-theme="light"] .svc-card .svc-img,
-:root[data-theme="light"] .port-tile img,
-:root[data-theme="light"] .gallery-item img,
-:root[data-theme="light"] .team-card img {
-  filter: saturate(1) brightness(1);
-  opacity: 1;
-}
-:root[data-theme="light"] .svc-card .svc-img { opacity: 0.85; }
-:root[data-theme="light"] .svc-card::after {
-  background: linear-gradient(180deg, rgba(244,240,232,0.1) 0%, rgba(244,240,232,0.45) 50%, rgba(20,23,28,0.85) 100%);
-}
-:root[data-theme="light"] .marquee { background: var(--bg-2); }
-:root[data-theme="light"] .marquee-track { color: var(--ink-muted); }
-:root[data-theme="light"] .site-footer { background: var(--ink); color: rgba(255,255,255,0.78); }
-:root[data-theme="light"] .site-footer a { color: rgba(255,255,255,0.78); }
-:root[data-theme="light"] .site-footer h4 { color: var(--brass); }
-:root[data-theme="light"] .site-footer .logo-name { color: #fff; }
-:root[data-theme="light"] .cta-band { background: var(--bg); }
-:root[data-theme="light"] .cta-band h2,
-:root[data-theme="light"] .cta-band p { color: var(--ink); }
-:root[data-theme="light"] .testimonial blockquote { color: var(--ink); }
-:root[data-theme="light"] .form-group input,
-:root[data-theme="light"] .form-group select,
-:root[data-theme="light"] .form-group textarea {
-  background: #fff; color: var(--ink);
-}
-:root[data-theme="light"] .btn-secondary { color: var(--ink); border-color: var(--ink); }
-:root[data-theme="light"] .btn-secondary:hover { background: var(--ink); color: var(--bg); }
-:root[data-theme="light"] .btn-outline-white { color: var(--ink); border-color: var(--ink); }
-:root[data-theme="light"] .btn-outline-white:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-:root[data-theme="light"] #jtm-promo-banner { background: var(--bg-2); }
-:root[data-theme="light"] #jtm-promo-banner .jtm-promo-text { color: var(--ink); }
-:root[data-theme="light"] #jtm-promo-banner .jtm-promo-credit { color: var(--ink-faint); }
-:root[data-theme="light"] .hero-meta-num,
-:root[data-theme="light"] .stat-num,
-:root[data-theme="light"] .step h3,
-:root[data-theme="light"] .testimonial-meta strong { color: var(--ink); }
-
-
-/* ============================================================
    SOFTEN — round corners + warmer shadows
    ============================================================ */
 .btn { border-radius: var(--radius-btn); }
@@ -1958,28 +1867,6 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 1px 0 var(--line-soft);
 }
 
-/* ============================================================
-   FLOATING THEME TOGGLE (bottom-right, always visible)
-   ============================================================ */
-.theme-toggle {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px; height: 38px;
-  border-radius: var(--radius-pill);
-  background: transparent;
-  border: 1px solid var(--line);
-  color: var(--ink);
-  cursor: pointer;
-  padding: 0;
-  transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
-  flex-shrink: 0;
-}
-.theme-toggle:hover { border-color: var(--brass); color: var(--brass); background: var(--brass-subtle); }
-.theme-toggle .ico-sun,
-.theme-toggle .ico-moon { width: 16px; height: 16px; }
-:root[data-theme="light"] .theme-toggle { background: rgba(255, 255, 255, 0.6); }
 
 /* ============================================================
    COCONUT-STYLE REACTIVE EFFECTS — bumped up
@@ -2008,11 +1895,6 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 1px 0 var(--line), 0 8px 30px rgba(0, 0, 0, 0.45);
   border-bottom-color: var(--brass);
 }
-:root[data-theme="light"] .site-header.is-scrolled {
-  background: rgba(244, 240, 232, 0.97);
-  box-shadow: 0 1px 0 var(--line), 0 8px 30px rgba(20, 23, 28, 0.08);
-}
-
 /* Hero accent text — animated brass gradient sweep */
 .hero-split-text h1 em,
 .page-hero h1 em,
@@ -2078,16 +1960,6 @@ img { max-width: 100%; height: auto; display: block; }
     0 0 0 1px var(--brass),
     0 0 30px var(--brass-glow);
 }
-:root[data-theme="light"] .svc-wide:hover,
-:root[data-theme="light"] .card:hover,
-:root[data-theme="light"] .testimonial:hover,
-:root[data-theme="light"] .team-card:hover {
-  box-shadow:
-    0 24px 60px rgba(20, 23, 28, 0.18),
-    0 0 0 1px var(--brass),
-    0 0 30px rgba(72, 112, 168, 0.25);
-}
-
 /* Animated brass underline under section heads */
 .sec-head { position: relative; }
 .sec-head::after {
@@ -2164,9 +2036,7 @@ img { max-width: 100%; height: auto; display: block; }
 .city-grid > .city-card:nth-last-child(4) { border-bottom-left-radius: var(--radius-card); }
 .city-grid > .city-card:last-child { border-bottom-right-radius: var(--radius-card); }
 .gallery-filters button { border-radius: var(--radius-pill); }
-.hamburger, .theme-toggle, .lightbox-close, .lightbox-nav { border-radius: 12px; }
-.theme-toggle { border-radius: var(--radius-pill); }
-#jtm-promo-banner .jtm-promo-chip { border-radius: 6px; }
+.hamburger, #jtm-promo-banner .jtm-promo-chip { border-radius: 6px; }
 #jtm-promo-banner .jtm-close { border-radius: 8px; }
 .social-row a { border-radius: 10px; }
 .carousel-btn { border-radius: 12px; }
@@ -2193,46 +2063,8 @@ img { max-width: 100%; height: auto; display: block; }
    LIGHT-MODE TEXT CONTRAST FIXES
    force-dark text wherever hardcoded white was used
    ============================================================ */
-:root[data-theme="light"] .hero-split-text .lead,
-:root[data-theme="light"] .hero p.lead,
-:root[data-theme="light"] .hero .lead {
-  color: var(--ink-muted) !important;
-}
-:root[data-theme="light"] .trust-strip > div { color: var(--ink-muted) !important; }
-:root[data-theme="light"] .trust-strip { border-top-color: var(--line) !important; }
-:root[data-theme="light"] .hero-badge {
-  color: var(--ink-muted) !important;
-  background: rgba(255, 255, 255, 0.85) !important;
-  border-color: var(--line) !important;
-}
-:root[data-theme="light"] .hero-badge .y { color: var(--ink) !important; }
-:root[data-theme="light"] .page-hero h1 { color: var(--ink) !important; }
-:root[data-theme="light"] .page-hero p,
-:root[data-theme="light"] .page-hero .breadcrumb { color: var(--ink-muted) !important; }
-:root[data-theme="light"] .hero-split-tag-label { color: var(--ink) !important; }
-:root[data-theme="light"] .hero-split-tag {
-  background: rgba(255, 255, 255, 0.85) !important;
-  border-color: var(--line) !important;
-}
-
 /* Inline-styled white text (in HTML) — catch via attribute selectors */
-:root[data-theme="light"] [style*="rgba(255,255,255,0.7)"],
-:root[data-theme="light"] [style*="rgba(255,255,255,0.78)"],
-:root[data-theme="light"] [style*="rgba(255,255,255,0.85)"],
-:root[data-theme="light"] [style*="rgba(255,255,255,0.88)"],
-:root[data-theme="light"] [style*="rgba(255,255,255,0.92)"] {
-  color: var(--ink-muted) !important;
-}
-:root[data-theme="light"] [style*="color:#fff"],
-:root[data-theme="light"] [style*="color: #fff"] {
-  color: var(--ink) !important;
-}
-
 /* Form inside dark cta-band (which becomes light) */
-:root[data-theme="light"] .cta-band--form .form { background: var(--bg-card); border: 1px solid var(--line); }
-:root[data-theme="light"] .cta-direct-num { color: var(--ink); }
-:root[data-theme="light"] .cta-direct-label { color: var(--ink-faint); }
-
 /* Service cards (dark photos with white text) — keep dark inside even in light mode for legibility */
 .svc-card, .port-tile { /* no light override needed — bg image keeps cards dark */ }
 
