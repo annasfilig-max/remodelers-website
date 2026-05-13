@@ -2352,9 +2352,20 @@ html,body{margin:0!important;padding:0!important;overflow-x:hidden!important}
 .about-strip { background: #f7f7f7 !important; }
 .about-strip .col-body p { color: #525252 !important; }
 .page-hero {
-  background: #ffffff !important;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
   border-bottom: 1px solid #e5e5e5 !important;
 }
+.page-hero--photo { background-color: #ffffff; }
+.page-hero--photo::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: inherit;
+  filter: brightness(0.95);
+  z-index: 0;
+}
+.page-hero--photo .container { position: relative; z-index: 2; }
 .page-hero h1 { color: #0a0a0a !important; }
 .page-hero p { color: #525252 !important; }
 .card { background: #ffffff !important; border-color: #e5e5e5 !important; }
