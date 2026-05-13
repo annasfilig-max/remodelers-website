@@ -1,5 +1,5 @@
 /* ============================================================
-   REMODELERS — Light Premium + Red Accent
+   REMODELERS — Dark Premium + Brass Accent
    Coconut-inspired aesthetic with blue-collar touches:
    - Deep charcoal canvas, warm brass accent (kitchen/bath fixtures)
    - Oswald display + Inter body + JetBrains Mono for spec labels
@@ -10,15 +10,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 
 :root {
-  --bg:          #ffffff;
-  --bg-2:        #f7f7f7;
-  --bg-card:     #ffffff;
-  --bg-elev:     #fafafa;
-  --ink:         #0a0a0a;
-  --ink-muted:   #525252;
-  --ink-faint:   #8a8a8a;
-  --line:        #e5e5e5;
-  --line-soft:   #f0f0f0;
+  --bg:          #0a0a0a;
+  --bg-2:        #121212;
+  --bg-card:     #161616;
+  --bg-elev:     #1c1c1c;
+  --ink:         #fafafa;
+  --ink-muted:   #a3a3a3;
+  --ink-faint:   #6b6b6b;
+  --line:        #262626;
+  --line-soft:   #1f1f1f;
   --img-filter:  saturate(0.95) brightness(0.92);
   --hero-overlay-1: rgba(10,10,10,0.55);
   --hero-overlay-2: rgba(10,10,10,0.85);
@@ -27,11 +27,11 @@
 
 :root {
 
-  --brass:        #dc2626;
-  --brass-bright: #ef4444;
-  --brass-deep:   #991b1b;
-  --brass-glow:   rgba(220, 38, 38, 0.4);
-  --brass-subtle: rgba(220, 38, 38, 0.1);
+  --brass:        #4870A8;
+  --brass-bright: #6090C8;
+  --brass-deep:   #2D4F7E;
+  --brass-glow:   rgba(72, 112, 168, 0.5);
+  --brass-subtle: rgba(72, 112, 168, 0.1);
 
   --red:    #b5321c;
   --green:  #4ade80;
@@ -79,7 +79,7 @@ body {
 }
 body.no-scroll { overflow: hidden; }
 
-::selection { background: var(--brass); color: #ffffff; }
+::selection { background: var(--brass); color: var(--bg); }
 
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -183,13 +183,13 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .btn-primary {
   background: var(--brass);
-  color: #ffffff;
+  color: var(--bg);
   border-color: var(--brass);
 }
 .btn-primary:hover {
   background: var(--brass-bright);
   border-color: var(--brass-bright);
-  color: #ffffff;
+  color: var(--bg);
   box-shadow: 0 8px 30px var(--brass-glow);
   transform: translateY(-1px);
 }
@@ -200,7 +200,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .btn-secondary:hover {
   background: var(--ink);
-  color: #ffffff;
+  color: var(--bg);
   border-color: var(--ink);
 }
 .btn-outline-white {
@@ -216,7 +216,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line-soft);
@@ -353,7 +353,7 @@ img { max-width: 100%; height: auto; display: block; }
   content: "";
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.78) 70%, var(--bg) 100%),
+    linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.85) 70%, var(--bg) 100%),
     url('https://raw.githubusercontent.com/annasfilig-max/remodelers-website/main/assets/images/hero.png');
   background-size: cover;
   background-position: center;
@@ -1903,7 +1903,7 @@ img { max-width: 100%; height: auto; display: block; }
 .cta-band h2 em {
   background: linear-gradient(110deg,
     var(--brass) 0%, var(--brass-bright) 35%,
-    #FBA8A8 50%, var(--brass-bright) 65%, var(--brass) 100%);
+    #9DC0E8 50%, var(--brass-bright) 65%, var(--brass) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1984,7 +1984,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* City card hover: soft slide + glow */
 .city-card { transition: background 200ms ease, transform 200ms ease, box-shadow 200ms ease; }
-.city-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(220, 38, 38, 0.3); }
+.city-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(72, 112, 168, 0.3); }
 
 /* Marquee: fade at edges */
 .marquee {
@@ -2099,7 +2099,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: absolute;
   width: 400px; height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(239, 68, 68, 0.32) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(96, 144, 200, 0.32) 0%, transparent 65%);
   filter: blur(50px);
   opacity: 0.5;
   pointer-events: none;
@@ -2142,8 +2142,8 @@ img { max-width: 100%; height: auto; display: block; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(220, 38, 38, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(220, 38, 38, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(72, 112, 168, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72, 112, 168, 0.04) 1px, transparent 1px);
   background-size: 64px 64px;
   pointer-events: none;
   z-index: 1;
@@ -2235,9 +2235,9 @@ html, body,
 [id^="section-"], [id^="row-"], [id^="col-"],
 [class*="c-section"], [class*="c-row"], [class*="c-column"],
 [id^="custom-code-"] {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
-  color: #525252 !important;
+  background: #0a0a0a !important;
+  background-color: #0a0a0a !important;
+  color: #a3a3a3 !important;
 }
 /* Restore background-image on our actual content elements (selector above
    intentionally only targets GHL's auto-generated id prefixes, not class
@@ -2251,31 +2251,31 @@ html, body,
 }
 /* But keep our intentional darker variants */
 .section-alt, .marquee, .about-strip {
-  background: #f7f7f7 !important;
-  background-color: #f7f7f7 !important;
+  background: #121212 !important;
+  background-color: #121212 !important;
 }
 .cta-band, .hero-split {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+  background: #0a0a0a !important;
+  background-color: #0a0a0a !important;
 }
 /* Nav links — force white over GHL link defaults */
 .nav-main a, .nav-main a:link, .nav-main a:visited {
-  color: #0a0a0a !important;
+  color: #fafafa !important;
 }
-.nav-main a[aria-current="page"] { color: #dc2626 !important; }
+.nav-main a[aria-current="page"] { color: #4870A8 !important; }
 /* Logo + header phone in their right colors */
-.logo-name { color: #0a0a0a !important; }
-.logo-tag { color: #dc2626 !important; }
-.header-phone { color: #0a0a0a !important; }
+.logo-name { color: #fafafa !important; }
+.logo-tag { color: #4870A8 !important; }
+.header-phone { color: #fafafa !important; }
 /* H1/H2 white — GHL might apply dark default colors */
-h1, h2, h3, h4 { color: #0a0a0a !important; }
+h1, h2, h3, h4 { color: #fafafa !important; }
 /* Section title within sec-head should be white */
 .sec-head h2, .sec-head .idx, .sec-head .meta { color: inherit !important; }
-.sec-head .idx, .sec-head .meta { color: #dc2626 !important; }
+.sec-head .idx, .sec-head .meta { color: #4870A8 !important; }
 .sec-head .meta { color: #6b6b6b !important; }
 /* Keep service/portfolio card text readable on photo */
-.svc-wide-body h3 { color: #0a0a0a !important; } .svc-card h3 { color: #ffffff !important; }
-.svc-wide-body p { color: #525252 !important; }
+.svc-wide-body h3, .svc-card h3 { color: #fafafa !important; }
+.svc-wide-body p { color: #a3a3a3 !important; }
 
 /* ---------- GHL embed overrides ---------- */
 .hl_page-preview--content,
@@ -2298,142 +2298,3 @@ html,body{margin:0!important;padding:0!important;overflow-x:hidden!important}
   .page-hero h1{font-size:2.25rem!important}
 }
 [class*="hl_page-preview"],[id^="section-"],[class^="row-"],[class^="col-"]{margin-top:0!important;padding-top:0!important}
-
-/* ============================================================
-   LIGHT THEME POLISH (Naz JC-style) — keep footer dark, banner dark
-   ============================================================ */
-.site-footer {
-  background: #0a0a0a !important;
-  color: #a3a3a3 !important;
-}
-.site-footer .logo-name { color: #fafafa !important; }
-.site-footer a { color: #a3a3a3 !important; }
-.site-footer a:hover { color: var(--brass) !important; }
-.site-footer .footer-bottom { color: #6b6b6b !important; }
-.site-footer h4 { color: var(--brass) !important; }
-.marquee {
-  background: #f7f7f7 !important;
-  color: #525252 !important;
-  border-top: 1px solid #e5e5e5 !important;
-  border-bottom: 1px solid #e5e5e5 !important;
-}
-.hero-split-text h1 { color: #0a0a0a !important; }
-.hero-split-text .lead { color: #525252 !important; }
-.hero-meta-num { color: #0a0a0a !important; }
-.hero-meta-label { color: #8a8a8a !important; }
-.hero-split-tag {
-  background: rgba(255,255,255,0.92) !important;
-  border-color: #e5e5e5 !important;
-  color: #0a0a0a !important;
-}
-.hero-split-tag-label { color: #525252 !important; }
-.svc-wide { background: #ffffff !important; border-color: #e5e5e5 !important; }
-.svc-wide-body { color: #525252 !important; }
-.testimonial { background: #ffffff !important; border-color: #e5e5e5 !important; }
-.big-quote blockquote { color: #0a0a0a !important; }
-.big-quote-meta strong { color: #0a0a0a !important; }
-.cta-band--form .form {
-  background: #ffffff !important;
-  border-color: #e5e5e5 !important;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.08);
-}
-.cta-band h2 { color: #0a0a0a !important; }
-.cta-band p { color: #525252 !important; }
-.cta-direct-num { color: #0a0a0a !important; }
-.form-group input,
-.form-group select,
-.form-group textarea {
-  background: #ffffff !important;
-  color: #0a0a0a !important;
-  border-color: #e5e5e5 !important;
-}
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: #a3a3a3 !important; }
-.step:hover { background: rgba(220, 38, 38, 0.04) !important; }
-.stat-num { color: #0a0a0a !important; }
-.about-strip { background: #f7f7f7 !important; }
-.about-strip .col-body p { color: #525252 !important; }
-.page-hero {
-  background-color: #ffffff;
-  background-size: cover;
-  background-position: center;
-  border-bottom: 1px solid #e5e5e5 !important;
-}
-.page-hero--photo { background-color: #ffffff; }
-.page-hero--photo::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: inherit;
-  filter: brightness(0.95);
-  z-index: 0;
-}
-.page-hero--photo .container { position: relative; z-index: 2; }
-.page-hero h1 { color: #0a0a0a !important; }
-.page-hero p { color: #525252 !important; }
-.card { background: #ffffff !important; border-color: #e5e5e5 !important; }
-.card:hover { box-shadow: 0 24px 60px rgba(0,0,0,0.1); }
-.gallery-filters button {
-  background: #ffffff !important;
-  color: #525252 !important;
-  border-color: #e5e5e5 !important;
-}
-.gallery-filters button.active,
-.gallery-filters button:hover {
-  background: var(--brass) !important;
-  color: #ffffff !important;
-  border-color: var(--brass) !important;
-}
-.gallery-item { background: #fafafa !important; border-color: #e5e5e5 !important; }
-.city-grid { border-color: #e5e5e5 !important; }
-.city-card {
-  background: #ffffff !important;
-  border-color: #e5e5e5 !important;
-}
-.city-card .name { color: #0a0a0a !important; }
-.city-card .sub { color: #8a8a8a !important; }
-.city-card:hover .name { color: #ffffff !important; }
-.faq-item { border-color: #e5e5e5 !important; }
-.faq-q { color: #0a0a0a !important; }
-.faq-a { color: #525252 !important; }
-.carousel-btn {
-  background: #ffffff !important;
-  border-color: #e5e5e5 !important;
-  color: #0a0a0a !important;
-}
-.carousel-btn:hover { background: var(--brass) !important; color: #ffffff !important; border-color: var(--brass) !important; }
-.hamburger {
-  background: #ffffff !important;
-  border-color: #e5e5e5 !important;
-  color: #0a0a0a !important;
-}
-.mobile-menu { background: #ffffff !important; }
-.mobile-menu nav a {
-  color: #0a0a0a !important;
-  border-bottom-color: #f0f0f0 !important;
-}
-.mobile-menu-head { border-bottom-color: #e5e5e5 !important; }
-#jtm-promo-banner {
-  background: #0a0a0a !important;
-  color: #fafafa !important;
-}
-#jtm-promo-banner .jtm-promo-text { color: #fafafa !important; }
-#jtm-promo-banner .jtm-promo-credit { color: #a3a3a3 !important; }
-.section-alt { background: #f7f7f7 !important; }
-.svc-wide:hover, .card:hover, .testimonial:hover, .team-card:hover {
-  box-shadow:
-    0 24px 60px rgba(0,0,0,0.12),
-    0 0 0 1px var(--brass),
-    0 0 24px rgba(220, 38, 38, 0.15) !important;
-}
-.hero-split-text h1 em,
-.page-hero h1 em,
-.cta-band h2 em {
-  background: linear-gradient(110deg,
-    var(--brass) 0%, var(--brass-bright) 35%,
-    #FBA8A8 50%, var(--brass-bright) 65%, var(--brass) 100%) !important;
-  background-size: 200% 100% !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: transparent !important;
-}
